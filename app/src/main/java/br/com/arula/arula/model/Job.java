@@ -10,6 +10,12 @@ public class Job implements Serializable{
     private Long Id;
     private String Name;
 
+    public Job(String name) {
+        this.Name = name;
+    }
+
+    public Job() {}
+
     public Long getId() {
         return Id;
     }

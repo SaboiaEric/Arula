@@ -11,6 +11,12 @@ public class User implements Serializable{
 
     private String Name;
 
+    public User() {}
+
+    public User (String name) {
+        this.Name = name;
+    }
+
     public Long getId() {
         return Id;
     }

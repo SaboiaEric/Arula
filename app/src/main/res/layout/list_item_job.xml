@@ -24,12 +24,11 @@
 
         <TextView
             android:id="@+id/jobName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="25dp"
+            android:paddingLeft="180dp"
             android:paddingTop="20dp"
-            android:text="Rafael Cordeiro"
-            android:textColor="#fff"/>
+            android:text="Rafael Cordeiro" />
 
 
     </RelativeLayout>
