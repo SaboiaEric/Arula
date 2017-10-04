@@ -17,7 +17,8 @@ import br.com.arula.arula.R;
 import br.com.arula.arula.RecyclerViewClickPosition;
 import br.com.arula.arula.adapter.CardViewAdapterJob;
 import br.com.arula.arula.adapter.CardViewAdapterUser;
-import br.com.arula.arula.dao.DAO;
+import br.com.arula.arula.dao.JobDAO;
+import br.com.arula.arula.dao.UserDAO;
 import br.com.arula.arula.model.Job;
 import br.com.arula.arula.model.User;
 import butterknife.BindView;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     private RecyclerView.LayoutManager mLayoutManager;
     private List<Job> jobs;
     private List<User> users;
-    private DAO dao;
+    private UserDAO userDAO;
+    private JobDAO jobDAO;
 
 
     @Override
@@ -45,13 +47,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
 
         ButterKnife.bind(this);
 
-        dao = new DAO(this);
+        userDAO = new UserDAO(this);
+        jobDAO = new JobDAO(this);
 
         mLayoutManager = new LinearLayoutManager(this);
         list.setLayoutManager(mLayoutManager);
 
-        jobs = dao.ReadJobs();
-        users = dao.ReadUsers();
+        jobs = jobDAO.Read();
+        users = userDAO.Read();
 
         //mTextMessage = (TextView) findViewById(R.id.);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -68,18 +71,18 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     jobs.clear();
-                    for(int i = 0; i < dao.ReadJobs().size(); i++) {
+                    for(int i = 0; i < jobDAO.Read().size(); i++) {
                         if(i%2==0)
-                            jobs.add(dao.ReadJobs().get(i));
+                            jobs.add(jobDAO.Read().get(i));
                     }
                     loadListJobs();
                     //mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_dashboard:
                     jobs.clear();
-                    for(int i = 0; i < dao.ReadJobs().size(); i++) {
+                    for(int i = 0; i < jobDAO.Read().size(); i++) {
                         if(i%2!=0)
-                            jobs.add(dao.ReadJobs().get(i));
+                            jobs.add(jobDAO.Read().get(i));
                     }
                     loadListJobs();
                     //mTextMessage.setText("opa");
@@ -87,8 +90,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 case R.id.navigation_notifications:
                     jobs.clear();
                     users.clear();
-                    for(int i = 0; i < dao.ReadUsers().size(); i++) {
-                        users.add(dao.ReadUsers().get(i));
+                    for(int i = 0; i < userDAO.Read().size(); i++) {
+                        users.add(userDAO.Read().get(i));
                     }
                     loadListUsers();
                     //mTextMessage.setText(R.string.title_notifications);
@@ -112,8 +115,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         switch(item.getItemId()) {
             case R.id.menu_generate_jobs:
                 generateJobs();
+                break;
             case R.id.menu_generate_users:
                 generateUsers();
+                break;
         }
 
         return false;
@@ -136,17 +141,17 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
 
     public void generateJobs() {
         for(int i = 0; i < 10; i++) {
-            dao.InsertJobs(new Job("Job"+i));
+            jobDAO.Insert(new Job("Job"+i));
         }
 
-        int n = dao.ReadJobs().size();
+        int n = jobDAO.Read().size();
     }
 
     public void generateUsers() {
         for(int i = 0; i < 10; i++) {
-            dao.InsertUsers(new User("User"+i));
+            userDAO.Insert(new User("User"+i));
         }
 
-        int n = dao.ReadUsers().size();
+        int n = userDAO.Read().size();
     }
 }

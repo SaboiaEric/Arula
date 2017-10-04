@@ -9,6 +9,24 @@ import java.io.Serializable;
 public class Job implements Serializable{
     private Long Id;
     private String Name;
+    private String desc;
+    private Double salary;
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
 
     public Job(String name) {
         this.Name = name;

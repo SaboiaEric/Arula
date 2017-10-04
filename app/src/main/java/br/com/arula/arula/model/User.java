@@ -8,8 +8,35 @@ import java.io.Serializable;
 
 public class User implements Serializable{
     private Long Id;
-
     private String Name;
+    private String Email;
+    private String CPF;
+    private String Address;
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
 
     public User() {}
 

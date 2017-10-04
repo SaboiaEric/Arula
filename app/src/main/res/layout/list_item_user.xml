@@ -13,22 +13,39 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="90dp">
 
         <ImageView
             android:src="@color/colorPrimary"
-            android:layout_width="110dp"
-            android:layout_height="60dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:scaleType="centerCrop"
             android:id="@+id/jobImage"/>
 
         <TextView
-            android:id="@+id/jobName"
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="180dp"
-            android:paddingTop="20dp"
-            android:text="Rafael Cordeiro" />
+            android:paddingLeft="100dp"
+            android:paddingTop="10dp"
+            android:text="Rafael Cordeiro"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/userScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp"
+            android:paddingTop="40dp"
+            android:text="3400 pontos"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp"
+            android:paddingTop="65dp"
+            android:text="Python | Go | PHP | C#"
+            android:textSize="12dp"/>
 
 
     </RelativeLayout>

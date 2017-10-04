@@ -13,12 +13,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="100dp">
 
         <ImageView
             android:src="@color/colorAccent"
             android:layout_width="110dp"
-            android:layout_height="60dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
             android:id="@+id/jobImage"/>
 
@@ -26,9 +26,36 @@
             android:id="@+id/jobName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="180dp"
-            android:paddingTop="20dp"
-            android:text="Rafael Cordeiro" />
+            android:paddingLeft="120dp"
+            android:paddingTop="10dp"
+            android:text="Desenvolvedor Full-Stack"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/jobCompanyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="120dp"
+            android:paddingTop="40dp"
+            android:text="Nome da empresa"/>
+
+        <TextView
+            android:id="@+id/jobSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="120dp"
+            android:paddingTop="55dp"
+            android:text="R$ 1.000,00"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/jobDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="120dp"
+            android:paddingTop="75dp"
+            android:text="Android | .NET | Go | Python"
+            android:textSize="14dp"/>
 
 
     </RelativeLayout>

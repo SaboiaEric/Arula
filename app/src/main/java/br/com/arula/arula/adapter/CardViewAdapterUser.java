@@ -27,7 +27,7 @@ public class CardViewAdapterUser extends RecyclerView.Adapter<CardViewAdapterUse
 
 
 
-    @BindView(R.id.jobName)
+    @BindView(R.id.userName)
     TextView title;
     @BindView(R.id.jobImage)
     ImageView image;

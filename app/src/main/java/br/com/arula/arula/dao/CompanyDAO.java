@@ -17,12 +17,12 @@ import br.com.arula.arula.model.Company;
 
 public class CompanyDAO extends SQLiteOpenHelper{
     public CompanyDAO(Context context) {
-        super(context, "Arula", null, 1);
+        super(context, "Arula_Companies", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Companies (Id INTEGER PRIMARY KEY, Name TEXT);";
+        String sql = "CREATE TABLE Companies (Id INTEGER PRIMARY KEY, Name TEXT, Email TEXT, CPF TEXT, Address TEXT);";
         db.execSQL(sql);
     }
 
@@ -33,7 +33,7 @@ public class CompanyDAO extends SQLiteOpenHelper{
 
     public void Insert(Company company) {
         SQLiteDatabase db = getWritableDatabase();
-        ContentValues data = getContentValuesDream(company);
+        ContentValues data = getContentValuesCompanies(company);
         db.insert("Companies", null, data);
     }
 
@@ -48,6 +48,9 @@ public class CompanyDAO extends SQLiteOpenHelper{
 
             company.setId(c.getLong(c.getColumnIndex("Id")));
             company.setName(c.getString(c.getColumnIndex("Name")));
+            company.setEmail(c.getString(c.getColumnIndex("Email")));
+            company.setCPF(c.getString(c.getColumnIndex("CPF")));
+            company.setAddress(c.getString(c.getColumnIndex("Address")));
 
             companies.add(company);
         }
@@ -75,14 +78,17 @@ public class CompanyDAO extends SQLiteOpenHelper{
 
     public void Update(Company company) {
         SQLiteDatabase db = getWritableDatabase();
-        ContentValues data = getContentValuesDream(company);
+        ContentValues data = getContentValuesCompanies(company);
         String[] params = {company.getId().toString()};
         db.update("Companies", data, "Id = ?", params);
     }
 
-    private ContentValues getContentValuesDream(Company company) {
+    private ContentValues getContentValuesCompanies(Company company) {
         ContentValues data = new ContentValues();
         data.put("Name", company.getName());
+        data.put("Email", company.getEmail());
+        data.put("CPF", company.getCPF());
+        data.put("Address", company.getAddress());
 
         return data;
     }
