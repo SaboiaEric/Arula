@@ -48,6 +48,14 @@
         <activity
             android:name=".activities.QuestionActivity"
             android:label="@string/title_activity_question"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.JobActivity"
+            android:label="@string/title_activity_job"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.UserActivity"
+            android:label="@string/title_activity_user"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
