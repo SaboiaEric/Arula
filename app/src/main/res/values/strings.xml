@@ -95,4 +95,6 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_question">QuestionActivity</string>
+    <string name="title_activity_job">JobActivity</string>
+    <string name="title_activity_user">UserActivity</string>
 </resources>
