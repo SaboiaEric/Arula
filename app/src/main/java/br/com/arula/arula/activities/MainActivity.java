@@ -1,5 +1,6 @@
 package br.com.arula.arula.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     private JobDAO jobDAO;
     private QuestionDAO questionDAO;
 
+    private int controlNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +66,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         users = userDAO.Read();
         questions = questionDAO.Read();
 
-        //mTextMessage = (TextView) findViewById(R.id.);
+        controlNavigation = 1;
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                         jobs.add(jobDAO.Read().get(i));
                     }
                     loadListJobs();
+                    controlNavigation = 1;
                     return true;
                 case R.id.navigation_jobsForUser:
                     jobs.clear();
@@ -91,12 +95,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                             jobs.add(jobDAO.Read().get(i));
                     }
                     loadListJobs();
+                    controlNavigation = 2;
                     return true;
                 case R.id.navigation_questions:
                     questions.clear();
                     for(Question q : questionDAO.Read())
                         questions.add(q);
                     loadListQuestions();
+                    controlNavigation = 3;
                     return true;
                 case R.id.navigation_rankings:
                     jobs.clear();
@@ -105,12 +111,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                         users.add(userDAO.Read().get(i));
                     }
                     loadListUsers();
+                    controlNavigation = 4;
                     //mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
             return false;
         }
-
     };
 
     @Override
@@ -143,7 +149,15 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
 
     @Override
     public void getRecyclerViewAdapterPosition(int position) {
+        if(controlNavigation == 1 || controlNavigation == 2) {
+            Intent intentJobActivity = new Intent(MainActivity.this, JobActivity.class);
+            startActivity(intentJobActivity);
+        } else if(controlNavigation == 3) {
 
+        } else if(controlNavigation == 4) {
+            Intent intentUserActivity = new Intent(MainActivity.this, UserActivity.class);
+            startActivity(intentUserActivity);
+        }
     }
 
     public void loadListJobs() {

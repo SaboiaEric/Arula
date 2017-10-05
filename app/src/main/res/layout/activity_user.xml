@@ -20,14 +20,91 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_user" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/colorPrimary">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        <ImageView
+            android:id="@+id/imageJobActivity"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="135dp"
+            android:src="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/jobNameJobActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="180dp"
+            android:paddingLeft="120dp"
+            android:text="Rafael Cordeiro"
+            android:textSize="18dp"
+            android:textColor="#fff"/>
+
+
+        <TextView
+            android:id="@+id/companyNameJobActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="200dp"
+            android:paddingLeft="90dp"
+            android:text="Engenharia da Computação"
+            android:textSize="16dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/salaryJobActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="225dp"
+            android:paddingLeft="140dp"
+            android:text="14450 pontos"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição: "
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/descJobActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="Do mesmo modo, a consulta aos diversos militantes ainda não demonstrou convincentemente que vai participar na mudança das posturas dos órgãos dirigentes com relação às suas atribuições. Ainda assim, existem dúvidas a respeito de como o novo modelo estrutural aqui preconizado pode nos levar a considerar a reestruturação de alternativas às soluções ortodoxas. Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a expansão dos mercados mundiais nos obriga à análise dos relacionamentos verticais entre as hierarquias."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Habilidades: "
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/reqJobActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Go | PHP | .NET | Javascript | Python"/>
+
+
+
+    </LinearLayout>
+
 
 </android.support.design.widget.CoordinatorLayout>
