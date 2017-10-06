@@ -27,9 +27,16 @@ public class CardViewAdapterJob extends RecyclerView.Adapter<CardViewAdapterJob.
 
 
     @BindView(R.id.jobName)
-    TextView title;
+    TextView name;
     @BindView(R.id.jobImage)
     ImageView image;
+    @BindView(R.id.jobCompanyName)
+    TextView company;
+    @BindView(R.id.jobSalary)
+    TextView salary;
+    @BindView(R.id.jobDesc)
+    TextView desc;
+
 
     public CardViewAdapterJob(List<Job> jobs, RecyclerViewClickPosition positionInterface) {
         this.jobs = jobs.toArray(new Job[jobs.size()]);
@@ -46,8 +53,12 @@ public class CardViewAdapterJob extends RecyclerView.Adapter<CardViewAdapterJob.
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        title.setText(jobs[position].getName());
-        //image.setVisibility((!jobs[position].getAudioPath().isEmpty()) ? View.VISIBLE : View.INVISIBLE);
+        name.setText(jobs[position].getName());
+        //image.setImageBitmap();
+        company.setText(jobs[position].getCompanyName());
+        salary.setText(jobs[position].getSalary().toString());
+        desc.setText(jobs[position].getDesc());
+
     }
 
     @Override

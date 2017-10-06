@@ -29,8 +29,13 @@ public class CardViewAdapterUser extends RecyclerView.Adapter<CardViewAdapterUse
 
     @BindView(R.id.userName)
     TextView title;
-    @BindView(R.id.jobImage)
+    @BindView(R.id.userImage)
     ImageView image;
+    @BindView(R.id.userScore)
+    TextView score;
+    @BindView(R.id.userReq)
+    TextView req;
+
 
     public CardViewAdapterUser(List<User> users, RecyclerViewClickPosition positionInterface) {
         this.users = users.toArray(new User[users.size()]);
@@ -48,7 +53,10 @@ public class CardViewAdapterUser extends RecyclerView.Adapter<CardViewAdapterUse
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         title.setText(users[position].getName());
-        //image.setVisibility((!jobs[position].getAudioPath().isEmpty()) ? View.VISIBLE : View.INVISIBLE);
+        //image.setImageBitmap();
+        score.setText(users[position].getScore().toString());
+        req.setText(users[position].getReq());
+
     }
 
     @Override
