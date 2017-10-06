@@ -180,14 +180,29 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     }
 
     public void generateJobs() {
-        for(int i = 0; i < 10; i++) {
-            jobDAO.Insert(new Job("Job"+i));
+        for(int i = 0; i < 5; i++) {
+            Job job = new Job("Job"+i);
+            job.setCompanyName("Facebook");
+            job.setSalary(4000.0);
+            job.setType("CLT");
+            job.setHour("9h-18h");
+            job.setDesc("Pensando mais a longo prazo, a percepção das dificuldades faz parte de um processo de gerenciamento das diretrizes de desenvolvimento para o futuro. No mundo atual, o desenvolvimento contínuo de distintas formas de atuação não pode mais se dissociar do processo de comunicação como um todo. A nível organizacional, a consolidação das estruturas nos obriga à análise do retorno esperado a longo prazo.");
+            job.setReq("Go | Python | Kotlin | JS");
+
+
+            jobDAO.Insert(job);
         }
     }
 
     public void generateUsers() {
         for(int i = 0; i < 10; i++) {
-            userDAO.Insert(new User("User"+i));
+            User user = new User("User"+i);
+            user.setFormation("Engenharia da Computação");
+            user.setScore(i*330.0);
+            user.setDesc("Do mesmo modo, a consulta aos diversos militantes ainda não demonstrou convincentemente que vai participar na mudança das posturas dos órgãos dirigentes com relação às suas atribuições. Ainda assim, existem dúvidas a respeito de como o novo modelo estrutural aqui preconizado pode nos levar a considerar a reestruturação de alternativas às soluções ortodoxas. Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a expansão dos mercados mundiais nos obriga à análise dos relacionamentos verticais entre as hierarquias.");
+            user.setReq("C# | Java | PHP | C");
+
+            userDAO.Insert(user);
         }
     }
 

@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:paddingTop="200dp"
             android:paddingLeft="90dp"
-            android:text="Engenharia da Computação"
+            android:text=""
             android:textSize="16dp"
             android:textColor="#fff"/>
 
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:text="Do mesmo modo, a consulta aos diversos militantes ainda não demonstrou convincentemente que vai participar na mudança das posturas dos órgãos dirigentes com relação às suas atribuições. Ainda assim, existem dúvidas a respeito de como o novo modelo estrutural aqui preconizado pode nos levar a considerar a reestruturação de alternativas às soluções ortodoxas. Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a expansão dos mercados mundiais nos obriga à análise dos relacionamentos verticais entre as hierarquias."/>
+            android:text=""/>
 
         <TextView
             android:layout_width="wrap_content"
