@@ -25,7 +25,7 @@ public class JobDAO extends SQLiteOpenHelper {
         String sql = "CREATE TABLE Jobs (" +
                 "Id INTEGER PRIMARY KEY, " +
                 "Name TEXT, Desc TEXT, " +
-                "Salary numeric(18,0) " +
+                "Salary numeric(18,0), " +
                 "Image TEXT, " +
                 "CompanyName TEXT, " +
                 "Type TEXT, " +
