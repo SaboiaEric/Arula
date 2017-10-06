@@ -12,6 +12,51 @@ public class User implements Serializable{
     private String Email;
     private String CPF;
     private String Address;
+    private char[] Image;
+    private String Formation;
+    private Double Score;
+    private String Desc;
+    private String Req;
+
+    public char[] getImage() {
+        return Image;
+    }
+
+    public void setImage(char[] image) {
+        Image = image;
+    }
+
+    public String getFormation() {
+        return Formation;
+    }
+
+    public void setFormation(String formation) {
+        Formation = formation;
+    }
+
+    public Double getScore() {
+        return Score;
+    }
+
+    public void setScore(Double score) {
+        Score = score;
+    }
+
+    public String getDesc() {
+        return Desc;
+    }
+
+    public void setDesc(String desc) {
+        Desc = desc;
+    }
+
+    public String getReq() {
+        return Req;
+    }
+
+    public void setReq(String req) {
+        Req = req;
+    }
 
     public String getEmail() {
         return Email;
@@ -36,7 +81,6 @@ public class User implements Serializable{
     public void setAddress(String address) {
         Address = address;
     }
-
 
     public User() {}
 
