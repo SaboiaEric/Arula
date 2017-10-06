@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import br.com.arula.arula.R;
+import br.com.arula.arula.model.Job;
 
 public class JobActivity extends AppCompatActivity {
 
@@ -17,6 +18,8 @@ public class JobActivity extends AppCompatActivity {
         setContentView(R.layout.activity_job);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Job job = (Job) getIntent().getSerializableExtra("job");
     }
 
 }

@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import br.com.arula.arula.R;
+import br.com.arula.arula.model.User;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -17,5 +18,8 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        User user = (User) getIntent().getSerializableExtra("user");
+
     }
 }

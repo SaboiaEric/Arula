@@ -150,12 +150,16 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     @Override
     public void getRecyclerViewAdapterPosition(int position) {
         if(controlNavigation == 1 || controlNavigation == 2) {
+            Job job = jobs.get(position);
             Intent intentJobActivity = new Intent(MainActivity.this, JobActivity.class);
+            intentJobActivity.putExtra("job", job);
             startActivity(intentJobActivity);
         } else if(controlNavigation == 3) {
 
         } else if(controlNavigation == 4) {
+            User user = users.get(position);
             Intent intentUserActivity = new Intent(MainActivity.this, UserActivity.class);
+            intentUserActivity.putExtra("user", user);
             startActivity(intentUserActivity);
         }
     }

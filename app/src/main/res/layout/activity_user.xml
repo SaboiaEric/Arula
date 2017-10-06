@@ -26,7 +26,7 @@
         android:background="@color/colorPrimary">
 
         <ImageView
-            android:id="@+id/imageJobActivity"
+            android:id="@+id/imageUserActivity"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="70dp"
@@ -34,7 +34,7 @@
             android:src="@color/colorAccent"/>
 
         <TextView
-            android:id="@+id/jobNameJobActivity"
+            android:id="@+id/userNameUserActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="180dp"
@@ -45,7 +45,7 @@
 
 
         <TextView
-            android:id="@+id/companyNameJobActivity"
+            android:id="@+id/formationUserActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="200dp"
@@ -55,7 +55,7 @@
             android:textColor="#fff"/>
 
         <TextView
-            android:id="@+id/salaryJobActivity"
+            android:id="@+id/scoreUserActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="225dp"
@@ -80,7 +80,7 @@
             android:textSize="16dp"/>
 
         <TextView
-            android:id="@+id/descJobActivity"
+            android:id="@+id/descUserActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -95,7 +95,7 @@
             android:layout_marginTop="5dp"/>
 
         <TextView
-            android:id="@+id/reqJobActivity"
+            android:id="@+id/reqUserActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
