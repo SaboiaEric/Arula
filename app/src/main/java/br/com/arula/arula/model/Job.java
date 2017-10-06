@@ -17,6 +17,12 @@ public class Job implements Serializable{
     private String Hour;
     private String Req;
 
+    public Job(String name) {
+        this.Name = name;
+    }
+
+    public Job() {}
+
     public char[] getImage() {
         return Image;
     }
@@ -73,11 +79,6 @@ public class Job implements Serializable{
         this.Salary = salary;
     }
 
-    public Job(String name) {
-        this.Name = name;
-    }
-
-    public Job() {}
 
     public Long getId() {
         return Id;

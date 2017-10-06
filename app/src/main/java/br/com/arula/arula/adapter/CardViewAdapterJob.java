@@ -34,8 +34,8 @@ public class CardViewAdapterJob extends RecyclerView.Adapter<CardViewAdapterJob.
     TextView company;
     @BindView(R.id.jobSalary)
     TextView salary;
-    @BindView(R.id.jobDesc)
-    TextView desc;
+    @BindView(R.id.jobReq)
+    TextView req;
 
 
     public CardViewAdapterJob(List<Job> jobs, RecyclerViewClickPosition positionInterface) {
@@ -57,7 +57,7 @@ public class CardViewAdapterJob extends RecyclerView.Adapter<CardViewAdapterJob.
         //image.setImageBitmap();
         company.setText(jobs[position].getCompanyName());
         salary.setText(jobs[position].getSalary().toString());
-        desc.setText(jobs[position].getDesc());
+        req.setText(jobs[position].getReq());
 
     }
 
