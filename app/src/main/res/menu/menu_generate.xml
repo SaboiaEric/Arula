@@ -29,4 +29,9 @@
         android:title="Profile"
         android:icon="@mipmap/user_profile"
         app:showAsAction="always"/>
+
+    <item android:id="@+id/menu_configuracao"
+        android:title="Configurações"
+        android:icon="@mipmap/settings_48dp"
+        app:showAsAction="collapseActionView"/>
 </menu>
