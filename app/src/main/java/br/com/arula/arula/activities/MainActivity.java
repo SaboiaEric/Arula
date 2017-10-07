@@ -150,11 +150,16 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 loadListQuestions();
                 break;
             case R.id.menu_profile:
-                Intent profile =new Intent(MainActivity.this, ProfileActivity.class);
+                Intent profile = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(profile);
                 break;
             case R.id.menu_busca:
 
+                break;
+
+            case R.id.menu_configuracao:
+                Intent settings = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(settings);
                 break;
         }
 
