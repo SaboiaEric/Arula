@@ -1,12 +1,15 @@
 package br.com.arula.arula.activities;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -124,6 +127,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_generate, menu);
 
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.menu_busca));
+        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -141,6 +148,13 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
             case R.id.menu_generate_questions:
                 generateQuestions();
                 loadListQuestions();
+                break;
+            case R.id.menu_profile:
+                Intent profile =new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(profile);
+                break;
+            case R.id.menu_busca:
+
                 break;
         }
 
