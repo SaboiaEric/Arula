@@ -155,7 +155,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
             intentJobActivity.putExtra("job", job);
             startActivity(intentJobActivity);
         } else if(controlNavigation == 3) {
-
+            Question question = questions.get(position);
+            Intent intentQuestionActivity = new Intent(MainActivity.this, QuestionActivity.class);
+            intentQuestionActivity.putExtra("question", question);
+            startActivity(intentQuestionActivity);
         } else if(controlNavigation == 4) {
             User user = users.get(position);
             Intent intentUserActivity = new Intent(MainActivity.this, UserActivity.class);

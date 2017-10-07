@@ -1,10 +1,12 @@
 package br.com.arula.arula.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Rafael Felipe on 04/10/2017.
  */
 
-public class Question {
+public class Question implements Serializable {
     private Long Id;
     private String Name;
     private String Question;
