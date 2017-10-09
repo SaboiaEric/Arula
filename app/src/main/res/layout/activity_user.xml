@@ -30,7 +30,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="70dp"
-            android:layout_marginLeft="135dp"
+            android:layout_centerHorizontal="true"
             android:src="@color/colorAccent"/>
 
         <TextView
@@ -38,8 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="180dp"
-            android:paddingLeft="120dp"
             android:text="Rafael Cordeiro"
+            android:gravity="center_horizontal"
             android:textSize="18dp"
             android:textColor="#fff"/>
 
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="200dp"
-            android:paddingLeft="90dp"
+            android:gravity="center_horizontal"
             android:text=""
             android:textSize="16dp"
             android:textColor="#fff"/>
@@ -59,8 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="225dp"
-            android:paddingLeft="140dp"
             android:text="14450 pontos"
+            android:gravity="center_horizontal"
             android:textColor="#fff"/>
     </RelativeLayout>
 

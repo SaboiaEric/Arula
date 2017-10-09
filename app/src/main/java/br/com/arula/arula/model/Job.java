@@ -16,12 +16,22 @@ public class Job implements Serializable{
     private String Type;
     private String Hour;
     private String Req;
+    private boolean control;
 
     public Job(String name) {
         this.Name = name;
     }
 
+
     public Job() {}
+
+    public boolean getControl() {
+        return control;
+    }
+
+    public void setControl(boolean control) {
+        this.control = control;
+    }
 
     public char[] getImage() {
         return Image;

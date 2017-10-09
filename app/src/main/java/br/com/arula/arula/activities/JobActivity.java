@@ -5,6 +5,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -34,6 +36,8 @@ public class JobActivity extends AppCompatActivity {
     @BindView(R.id.reqJobActivity)
     TextView req;
 
+    Job job;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +49,7 @@ public class JobActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        Job job = (Job) getIntent().getSerializableExtra("job");
+        job = (Job) getIntent().getSerializableExtra("job");
 
         //image.setImageBitmap();
         name.setText(job.getName());
@@ -55,12 +59,25 @@ public class JobActivity extends AppCompatActivity {
         hour.setText(job.getHour());
         desc.setText(job.getDesc());
         req.setText(job.getReq());
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_check, menu);
+
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
+        }
+        if(item.getItemId() == R.id.menu_check) {
+            job.setControl(true);
         }
 
         return super.onOptionsItemSelected(item);
