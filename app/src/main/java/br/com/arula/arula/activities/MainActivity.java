@@ -110,17 +110,19 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
             switch (item.getItemId()) {
                 case R.id.navigation_jobs:
                     jobs.clear();
-                    for(int i = 0; i < jobDAO.Read().size(); i++) {
-                        jobs.add(jobDAO.Read().get(i));
+                    for(Job j:  jobDAO.Read()) {
+                        jobs.add(j);
                     }
                     loadListJobs();
                     controlNavigation = 1;
                     return true;
                 case R.id.navigation_jobsForUser:
                     jobs.clear();
-                    for(int i = 0; i < jobDAO.Read().size(); i++) {
-                        if(i%2==0)
-                            jobs.add(jobDAO.Read().get(i));
+                    int cont = 0;
+                    for(Job j:  jobDAO.Read()) {
+                        if(cont%2==0)
+                            jobs.add(j);
+                        cont++;
                     }
                     loadListJobs();
                     controlNavigation = 2;
@@ -222,7 +224,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     }
 
     public void loadListJobs() {
-        mAdapter = new CardViewAdapterJob(jobs, this);
+        mAdapter = new CardViewAdapterJob(jobDAO.Read(), this);
         list.setAdapter(mAdapter);
     }
 
@@ -240,34 +242,22 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     public void generateJobs() {
         List<Job> jobsAux = new ArrayList<>();
 
+        jobsAux.add(new Job("Full Stack Developer", "IBM" , 10000.0, "PJ", "8h - 17h", "Desenvolvimento com programação funcional, com: JavaScript, NodeJs, ES6, ReactJS, Redux e MongoDb. Experiência na área. Habilidades no trabalho em equipe e colaboração com equipes externas. Método ágil, com desenvolvimentos de API, Rest e Post. Habilidades com melhores práticas de codificação, reutilização de software TDD, BDD e Git.","JAVASCRIPT | GIT | NODEJS | SCRUM | GO", "1"));
+        jobsAux.add(new Job("Analista Desenvolvedor", "Mercado Livre", 8500.0, "CLT", "9h - 18h", "Análise e desenvolvimento de software. Integração e colaboração com equipe back e front. Desenvolvimento de end-point e testes.", "JAVASCRIPT | NODE.JS | ES6 | MongoDb | Rest/API", "2"));
+        jobsAux.add(new Job("Especialista Cisco", "Cisco do Brasil", 4500.0, "CLT", "8h - 17h", "Analisar configurações no NX OS, realizar troubleshooting, sugerir alterações, implementá- las, conduzir reuniões, atuar nas janelas de configurações e realizar o suporte técnico no dia- a-dia", "NEXUS | CISCO | REDES DE COMPUTADORES", "3"));
+        jobsAux.add(new Job("Programador .NET Pleno", "GVT",3200.0 , "CLT", "9h - 18h", "Irá desenvolver em .NET em nosso cliente, manutenção e testes. Experiência em desenvolvimento de sistemas web com tecnologias como: .NET C#, HTML, JavaScript+jQuery, atuação com banco de dados Oracle e SQL. Experiência com projetos para instituições financeiras. Ensino Superior em Ciências da Computação ou Sistemas da Informação. Conhecimento em metodologia Ágil (SCRUM) e básico em UML.", "PLATAFORMA .NET | JAVASCRIPT | SCRUM | HTML | SQL-SERVER", "4"));
+        jobsAux.add(new Job("Analista Funcional", "Banco Intermedium", 4500.0, "CLT", "9h - 18h", "Realizar análise funcional, análises de projetos e apoio no ciclo de vida dos projetos e buscando melhorias dos processos. Experiência em mapeamento de processos, levantamento de requisitos do negócio e técnico. Execução de teste unitários e integrados para validação das entregas de projetos", "SCRUM | JAVA | JAVASCRIPT | MongoDB", "6"));
+        jobsAux.add(new Job("Analista Desenvolvedor IOS", "Instagram", 7200.0 , "PJ", "9h - 18h", "Projetar e desenvolver aplicativos mobile iOS (iPhone e iPad) com integração a sistemas, serviços e banco de dados. Graduação cursando em Sistemas de Informação, Engenharia de Software, Ciência da Computação, Engenharia da Computação e afins. Vivência em linguagem de programação IOS - Swift, ferramenta de programação IOS - XCode, Json/XML, APIs RESTful e SOAP. Vivência em GIT (TFS, Jira, GitHub e/ou outros), adaptação de layouts de iPhone e IPad, vivência em push notification, geração de certificados IOS, em publicação de aplicativos na loja do Apple Store.", "IOS | XCODE | SOAP | GIT | SQL", "8"));
+        jobsAux.add(new Job("DBA", "Nubank", 12700.0, "PJ", "8h - 17h", "Atuar com criação, manutenção e gestão do banco de dados, extração de dados e geração de querys. Operacionalizar as atividades da área de gestão de dados executando a sustentação das rotinas de cargas de bases de dados garantindo os prazos estabelecidos, com constante avaliação dos resultados gerados nos processos rotineiros. Ensino Superior completo na área de Tecnologia da Informação. Conhecimento em DBA, Sybase ASE e IQ em ambientes Linux e Solaris, SQL server 2005, 2008 e 2012. Desejável certificação Sybase IQ15 Administrator Professional e Certificação ITIL V3 Foundation", "LINUX | SYSBASE ASE | CERTIFICAÇÕES-ITIL-MVP", "9"));
+        jobsAux.add(new Job("Analista de Infraestrutura", "Uber", 6500.0 , "PJ", "9h - 18h", "Atuar com levantamento de demandas e desenho de arquitetura, atuação em projetos de infraestrutura, sobretudo em ambientes VMware. Atuar com gerenciamento e configuração de recursos avançados VMware. Conhecimento em VROPS (Realize Operations IT Operations Management)", "LINUX | VMware | Debian | CISCO", "10"));
+        jobsAux.add(new Job("Técnico em Informática", "Kibom", 1300.0 , "CLT", "8h - 17h", "Configuração e instalação de máquinas, notebooks e servidores.", "TÉCNICO EM INFORMÁTICA", "5"));
+        jobsAux.add(new Job("Assistente de Design Júnior", "Meu Sucesso", 970.0 , "CLT", "8h - 17h", "Dar apoio na criação de logomarcas, manual de identidade visual, criação de imagens para mídias sociais, banners, layouts e website. ", "UX | UI | SCRUM | COREL DRAW", "7"));
 
-        jobs.add(new Job("Full Stack Developer", "IBM" , 10000.0, "PJ", "45", "Desenvolvimento com programação funcional, com: JavaScript, NodeJs, ES6, ReactJS, Redux e MongoDb. Experiência na área. Habilidades no trabalho em equipe e colaboração com equipes externas. Método ágil, com desenvolvimentos de API, Rest e Post. Habilidades com melhores práticas de codificação, reutilização de software TDD, BDD e Git.","JAVASCRIPT | GIT | NODEJS | SCRUM | GO", ""));
-        jobs.add(new Job("Analista Desenvolvedor Sênior JavaScript", "Mercado Livre", 8500.0, "CLT", "30", "Análise e desenvolvimento de software. Integração e colaboração com equipe back e front. Desenvolvimento de end-point e testes.", "JAVASCRIPT | NODE.JS | ES6 | MongoDb | Rest/API", ""));
-        jobs.add(new Job("Especialista Cisco", "Cisco do Brasil", 4500.0, "CLT", "40", "Analisar configurações no NX OS, realizar troubleshooting, sugerir alterações, implementá- las, conduzir reuniões, atuar nas janelas de configurações e realizar o suporte técnico no dia- a-dia", "NEXUS | CISCO | REDES DE COMPUTADORES", ""));
-        jobs.add(new Job("Programador .NET Pleno", "GVT",3200.0 , "CLT", "41", "Irá desenvolver em .NET em nosso cliente, manutenção e testes. Experiência em desenvolvimento de sistemas web com tecnologias como: .NET C#, HTML, JavaScript+jQuery, atuação com banco de dados Oracle e SQL. Experiência com projetos para instituições financeiras. Ensino Superior em Ciências da Computação ou Sistemas da Informação. Conhecimento em metodologia Ágil (SCRUM) e básico em UML.", "PLATAFORMA .NET | JAVASCRIPT | SCRUM | HTML | SQL-SERVER", ""));
-        jobs.add(new Job("Técnico em Informática", "Aviação Cometa", 1300.0 , "CLT", "42", "Configuração e instalação de máquinas, notebooks e servidores.", "TÉCNICO EM INFORMÁTICA", ""));
-        jobs.add(new Job("Analista Funcional", "Banco Intermedium", 4500.0, "CLT", "42", "Realizar análise funcional, análises de projetos e apoio no ciclo de vida dos projetos e buscando melhorias dos processos. Experiência em mapeamento de processos, levantamento de requisitos do negócio e técnico. Execução de teste unitários e integrados para validação das entregas de projetos", "SCRUM | JAVA | JAVASCRIPT | MongoDB", ""));
-        jobs.add(new Job("Assistente de Design Júnior", "Meu Sucesso", 970.0 , "CLT", "42", "Dar apoio na criação de logomarcas, manual de identidade visual, criação de imagens para mídias sociais, banners, layouts e website. ", "UX | UI | SCRUM | COREL DRAW", ""));
-        jobs.add(new Job("Analista Desenvolvedor IOS", "Instagram", 7200.0 , "PJ", "40", "Projetar e desenvolver aplicativos mobile iOS (iPhone e iPad) com integração a sistemas, serviços e banco de dados. Graduação cursando em Sistemas de Informação, Engenharia de Software, Ciência da Computação, Engenharia da Computação e afins. Vivência em linguagem de programação IOS - Swift, ferramenta de programação IOS - XCode, Json/XML, APIs RESTful e SOAP. Vivência em GIT (TFS, Jira, GitHub e/ou outros), adaptação de layouts de iPhone e IPad, vivência em push notification, geração de certificados IOS, em publicação de aplicativos na loja do Apple Store.", "IOS | XCODE | SOAP | GIT | SQL", ""));
-        jobs.add(new Job("DBA", "Nubank", 12700.0, "PJ", "40", "Atuar com criação, manutenção e gestão do banco de dados, extração de dados e geração de querys. Operacionalizar as atividades da área de gestão de dados executando a sustentação das rotinas de cargas de bases de dados garantindo os prazos estabelecidos, com constante avaliação dos resultados gerados nos processos rotineiros. Ensino Superior completo na área de Tecnologia da Informação. Conhecimento em DBA, Sybase ASE e IQ em ambientes Linux e Solaris, SQL server 2005, 2008 e 2012. Desejável certificação Sybase IQ15 Administrator Professional e Certificação ITIL V3 Foundation", "LINUX | SYSBASE ASE | CERTIFICAÇÕES-ITIL-MVP", ""));
-        jobs.add(new Job("Analista de Infraestrutura", "Uber", 6500.0 , "PJ", "40", "Atuar com levantamento de demandas e desenho de arquitetura, atuação em projetos de infraestrutura, sobretudo em ambientes VMware. Atuar com gerenciamento e configuração de recursos avançados VMware. Conhecimento em VROPS (Realize Operations IT Operations Management)", "LINUX | VMware | Debian | CISCO", ""));
 
         for(Job j : jobsAux)
            jobDAO.Insert(j);
 
-
-        for(int i = 0; i < 5; i++) {
-            Job job = new Job("Job"+i);
-            job.setCompanyName("Facebook");
-            job.setSalary(4000.0);
-            job.setType("CLT");
-            job.setHour("9h-18h");
-            job.setDesc("Pensando mais a longo prazo, a percepção das dificuldades faz parte de um processo de gerenciamento das diretrizes de desenvolvimento para o futuro. No mundo atual, o desenvolvimento contínuo de distintas formas de atuação não pode mais se dissociar do processo de comunicação como um todo. A nível organizacional, a consolidação das estruturas nos obriga à análise do retorno esperado a longo prazo.");
-            job.setReq("Go | Python | Kotlin | JS");
-
-
-            jobDAO.Insert(job);
-        }
+        jobs = jobsAux;
     }
 
     public void generateUsers() {
@@ -281,7 +271,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         usersAux.add(new User("Ronaldo Dias", "Engenharia Elétrica", 5400.0, "Busco uma recolocação no mercado de desenvolvimento.", "PHP | C | Python", "8"));
         usersAux.add(new User("Heitor Augusto", "Engenharia Mecatrônica", 300.0, "Tenho 17 anos de experiência e quero trabalhar com novas tecnologias.", "Python | NodeJS", "9"));
         usersAux.add(new User("Patrícia Gonçalves", "Engenharia da Computação", 1500.0, "Procuro por um estágio que me faça entender todas as tecnologias da empresa", "C# | Go", "2"));
-        usersAux.add(new User("Otávio Cardoso", "Engenharia da Computação", 9500.0, "", "JavaScript | Java | C#", "10"));
+        usersAux.add(new User("Otávio Cardoso", "Engenharia da Computação", 9500.0, "Desejo entrar no mercado de trabalho e colocar em prática o que me foi ensinado.", "JavaScript | Java | C#", "10"));
 
         for(User u : usersAux)
             userDAO.Insert(u);

@@ -52,14 +52,37 @@ public class JobActivity extends AppCompatActivity {
 
         job = (Job) getIntent().getSerializableExtra("job");
 
-        //image.setImageBitmap();
+        setImage(job);
         name.setText(job.getName());
         company.setText(job.getCompanyName());
-        salary.setText(job.getSalary().toString());
+        salary.setText("R$ " + job.getSalary().toString());
         type.setText(job.getType());
         hour.setText(job.getHour());
         desc.setText(job.getDesc());
         req.setText(job.getReq());
+    }
+
+    public void setImage(Job job) {
+        if (job.getImage().equals("1"))
+            image.setImageResource(R.drawable.j1);
+        if (job.getImage().equals("2"))
+            image.setImageResource(R.drawable.j2);
+        if (job.getImage().equals("3"))
+            image.setImageResource(R.drawable.j3);
+        if (job.getImage().equals("4"))
+            image.setImageResource(R.drawable.j4);
+        if (job.getImage().equals("5"))
+            image.setImageResource(R.drawable.j5);
+        if (job.getImage().equals("6"))
+            image.setImageResource(R.drawable.j6);
+        if (job.getImage().equals("7"))
+            image.setImageResource(R.drawable.j7);
+        if (job.getImage().equals("8"))
+            image.setImageResource(R.drawable.j8);
+        if (job.getImage().equals("9"))
+            image.setImageResource(R.drawable.j9);
+        if (job.getImage().equals("10"))
+            image.setImageResource(R.drawable.j10);
     }
 
     @Override

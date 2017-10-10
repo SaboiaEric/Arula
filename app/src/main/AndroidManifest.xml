@@ -25,37 +25,37 @@
         </activity>
         <activity
             android:name=".activities.LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:label="" />
         <activity
             android:name=".activities.CustomJobsActivity"
-            android:label="@string/title_activity_custom_jobs"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.QuestionsOptionsActivity"
-            android:label="@string/title_activity_questions_options"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.RankingActivity"
-            android:label="@string/title_activity_ranking"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.SettingsActivity"
-            android:label="@string/title_activity_settings" />
+            android:label="" />
         <activity
             android:name=".activities.QuestionActivity"
-            android:label="@string/title_activity_question"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.JobActivity"
-            android:label="@string/title_activity_job"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.UserActivity"
-            android:label="@string/title_activity_user"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.ProfileActivity"
-            android:label="@string/title_activity_profile"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.ResultQuestionActivity"></activity>
     </application>

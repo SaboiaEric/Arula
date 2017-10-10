@@ -102,6 +102,7 @@ public class QuestionActivity extends AppCompatActivity {
 
         question = questions.get(count);
 
+        theme.setText(course);
         content.setText(question.getQuestion());
 
         textAnswerA.setText(question.getResA());
