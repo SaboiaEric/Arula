@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.com.arula.arula.R;
 import br.com.arula.arula.model.User;
@@ -79,6 +80,8 @@ public class UserActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             finish();
         }
+
+
 
         return super.onOptionsItemSelected(item);
     }

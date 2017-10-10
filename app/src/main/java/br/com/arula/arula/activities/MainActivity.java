@@ -238,21 +238,22 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     }
 
     public void generateJobs() {
-//        List<Job> jobsAux = new ArrayList<>();
-//
-//        jobsAux.add(new Job("", "", , "", "", "", "", "1"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "2"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "3"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "4"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "5"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "6"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "7"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "8"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "9"));
-//        jobsAux.add(new Job("", "", , "", "", "", "", "10"));
-//
-//        for(Job j : jobsAux)
-//            jobDAO.Insert(j);
+        List<Job> jobsAux = new ArrayList<>();
+
+
+        jobs.add(new Job("Full Stack Developer", "IBM" , 10000.0, "PJ", "45", "Desenvolvimento com programação funcional, com: JavaScript, NodeJs, ES6, ReactJS, Redux e MongoDb. Experiência na área. Habilidades no trabalho em equipe e colaboração com equipes externas. Método ágil, com desenvolvimentos de API, Rest e Post. Habilidades com melhores práticas de codificação, reutilização de software TDD, BDD e Git.","JAVASCRIPT | GIT | NODEJS | SCRUM | GO", ""));
+        jobs.add(new Job("Analista Desenvolvedor Sênior JavaScript", "Mercado Livre", 8500.0, "CLT", "30", "Análise e desenvolvimento de software. Integração e colaboração com equipe back e front. Desenvolvimento de end-point e testes.", "JAVASCRIPT | NODE.JS | ES6 | MongoDb | Rest/API", ""));
+        jobs.add(new Job("Especialista Cisco", "Cisco do Brasil", 4500.0, "CLT", "40", "Analisar configurações no NX OS, realizar troubleshooting, sugerir alterações, implementá- las, conduzir reuniões, atuar nas janelas de configurações e realizar o suporte técnico no dia- a-dia", "NEXUS | CISCO | REDES DE COMPUTADORES", ""));
+        jobs.add(new Job("Programador .NET Pleno", "GVT",3200.0 , "CLT", "41", "Irá desenvolver em .NET em nosso cliente, manutenção e testes. Experiência em desenvolvimento de sistemas web com tecnologias como: .NET C#, HTML, JavaScript+jQuery, atuação com banco de dados Oracle e SQL. Experiência com projetos para instituições financeiras. Ensino Superior em Ciências da Computação ou Sistemas da Informação. Conhecimento em metodologia Ágil (SCRUM) e básico em UML.", "PLATAFORMA .NET | JAVASCRIPT | SCRUM | HTML | SQL-SERVER", ""));
+        jobs.add(new Job("Técnico em Informática", "Aviação Cometa", 1300.0 , "CLT", "42", "Configuração e instalação de máquinas, notebooks e servidores.", "TÉCNICO EM INFORMÁTICA", ""));
+        jobs.add(new Job("Analista Funcional", "Banco Intermedium", 4500.0, "CLT", "42", "Realizar análise funcional, análises de projetos e apoio no ciclo de vida dos projetos e buscando melhorias dos processos. Experiência em mapeamento de processos, levantamento de requisitos do negócio e técnico. Execução de teste unitários e integrados para validação das entregas de projetos", "SCRUM | JAVA | JAVASCRIPT | MongoDB", ""));
+        jobs.add(new Job("Assistente de Design Júnior", "Meu Sucesso", 970.0 , "CLT", "42", "Dar apoio na criação de logomarcas, manual de identidade visual, criação de imagens para mídias sociais, banners, layouts e website. ", "UX | UI | SCRUM | COREL DRAW", ""));
+        jobs.add(new Job("Analista Desenvolvedor IOS", "Instagram", 7200.0 , "PJ", "40", "Projetar e desenvolver aplicativos mobile iOS (iPhone e iPad) com integração a sistemas, serviços e banco de dados. Graduação cursando em Sistemas de Informação, Engenharia de Software, Ciência da Computação, Engenharia da Computação e afins. Vivência em linguagem de programação IOS - Swift, ferramenta de programação IOS - XCode, Json/XML, APIs RESTful e SOAP. Vivência em GIT (TFS, Jira, GitHub e/ou outros), adaptação de layouts de iPhone e IPad, vivência em push notification, geração de certificados IOS, em publicação de aplicativos na loja do Apple Store.", "IOS | XCODE | SOAP | GIT | SQL", ""));
+        jobs.add(new Job("DBA", "Nubank", 12700.0, "PJ", "40", "Atuar com criação, manutenção e gestão do banco de dados, extração de dados e geração de querys. Operacionalizar as atividades da área de gestão de dados executando a sustentação das rotinas de cargas de bases de dados garantindo os prazos estabelecidos, com constante avaliação dos resultados gerados nos processos rotineiros. Ensino Superior completo na área de Tecnologia da Informação. Conhecimento em DBA, Sybase ASE e IQ em ambientes Linux e Solaris, SQL server 2005, 2008 e 2012. Desejável certificação Sybase IQ15 Administrator Professional e Certificação ITIL V3 Foundation", "LINUX | SYSBASE ASE | CERTIFICAÇÕES-ITIL-MVP", ""));
+        jobs.add(new Job("Analista de Infraestrutura", "Uber", 6500.0 , "PJ", "40", "Atuar com levantamento de demandas e desenho de arquitetura, atuação em projetos de infraestrutura, sobretudo em ambientes VMware. Atuar com gerenciamento e configuração de recursos avançados VMware. Conhecimento em VROPS (Realize Operations IT Operations Management)", "LINUX | VMware | Debian | CISCO", ""));
+
+        for(Job j : jobsAux)
+           jobDAO.Insert(j);
 
 
         for(int i = 0; i < 5; i++) {
@@ -271,15 +272,15 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
 
     public void generateUsers() {
         List<User> usersAux = new ArrayList<>();
-        usersAux.add(new User("Luiz Fernando", "Engenharia da Computação", 600.0, "", "C# | Python | Java", "4"));
-        usersAux.add(new User("Angela Maria", "Engenharia Mecatrônica", 1200.0, "", "C | Java", "1"));
-        usersAux.add(new User("Fernanda Carla", "Engenharia Elétrica", 100.0, "", "C | Go", "3"));
-        usersAux.add(new User("Gustavo Ferreira", "Engenharia Elétrica", 400.0, "", "Go | C# | PHP | Python", "5"));
-        usersAux.add(new User("Matheus da Cruz", "Engenharia Mecatrônica", 6600.0, "", "PHP | Go | Python", "6"));
-        usersAux.add(new User("Gisele Prado", "Engenharia da Computação", 13000.0, "", "C | Java | C#", "7"));
-        usersAux.add(new User("Ronaldo Dias", "Engenharia Elétrica", 5400.0, "", "PHP | C | Python", "8"));
-        usersAux.add(new User("Heitor Augusto", "Engenharia Mecatrônica", 300.0, "", "Python | NodeJS", "9"));
-        usersAux.add(new User("Patrícia Gonçalves", "Engenharia da Computação", 1500.0, "", "C# | Go", "2"));
+        usersAux.add(new User("Luiz Fernando", "Engenharia da Computação", 600.0, "Tenho grande experiência com desenvolvimento e busco aprender novas tecnologias.", "C# | Python | Java", "4"));
+        usersAux.add(new User("Angela Maria", "Engenharia Mecatrônica", 1200.0, "Tenho interesse por tecnolgia e quero adquirir novos conhecimentos.", "C | Java", "1"));
+        usersAux.add(new User("Fernanda Carla", "Engenharia Elétrica", 100.0, "Tenho experiência ao trabalhar com desenvolvimento back-end, mas desejo migrar para front-end.", "C | Go", "3"));
+        usersAux.add(new User("Gustavo Ferreira", "Engenharia Elétrica", 400.0, "Tenho grande experiência com desenvolvimento móvel e desejo me especializar nisso.", "Kotlin | Java | Android | Python", "5"));
+        usersAux.add(new User("Matheus da Cruz", "Engenharia Mecatrônica", 6600.0, "Desenvolvedor back-end e apaixonado por tecnologia.", "PHP | Go | Python", "6"));
+        usersAux.add(new User("Gisele Prado", "Engenharia da Computação", 13000.0, "Desejo entrar no mercado de trabalho e colocar em prática o que me foi ensinado.", "C | Java | C#", "7"));
+        usersAux.add(new User("Ronaldo Dias", "Engenharia Elétrica", 5400.0, "Busco uma recolocação no mercado de desenvolvimento.", "PHP | C | Python", "8"));
+        usersAux.add(new User("Heitor Augusto", "Engenharia Mecatrônica", 300.0, "Tenho 17 anos de experiência e quero trabalhar com novas tecnologias.", "Python | NodeJS", "9"));
+        usersAux.add(new User("Patrícia Gonçalves", "Engenharia da Computação", 1500.0, "Procuro por um estágio que me faça entender todas as tecnologias da empresa", "C# | Go", "2"));
         usersAux.add(new User("Otávio Cardoso", "Engenharia da Computação", 9500.0, "", "JavaScript | Java | C#", "10"));
 
         for(User u : usersAux)
@@ -310,21 +311,21 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
             questionDAO.Remove(q);
 
         questionDAO.Insert(new Question("(ENADE 2014) Considerando a concepção de um novo projeto de indústria de " +
-                "processamento de cana-de-açúcar visando à produção de açúcar e álcool, avalie as" +
+                "processamento de cana-de-açúcar visando à produção de açúcar e álcool, avalie as " +
                 "afirmações a seguir.\n" +
-                "I. O profissional responsável pela escolha dos equipamentos que" +
-                "irão compor a linha de produção deve identificar a capacidade de produção" +
+                "I. O profissional responsável pela escolha dos equipamentos que " +
+                "irão compor a linha de produção deve identificar a capacidade de produção " +
                 "dos equipamentos em regime normal de funcionamento, sem a " +
                 "necessidade de se preocupar com seus índices de rendimento.\n" +
-                "II. Para o processo do açúcar, o arranjo físico deve facilitar o fluxo" +
-                "de produção e impedir o fluxo cruzado, já que pode acontecer a" +
+                "II. Para o processo do açúcar, o arranjo físico deve facilitar o fluxo " +
+                "de produção e impedir o fluxo cruzado, já que pode acontecer a " +
                 "contaminação do produto.\n" +
                 "III. Para a produção do álcool, as dornas de fermentação devem ser " +
-                "projetadas considerando-se a agitação constante e visando à incorporação" +
+                "projetadas considerando-se a agitação constante e visando à incorporação " +
                 "de oxigênio ao meio.\n" +
-                "IV. As determinações da engenharia, conjuntamente com as" +
-                "necessidades do processo, influenciam diretamente o tipo de efluente" +
-                "industrial que será produzido e as suas respectivas formas de tratamento e" +
+                "IV. As determinações da engenharia, conjuntamente com as " +
+                "necessidades do processo, influenciam diretamente o tipo de efluente " +
+                "industrial que será produzido e as suas respectivas formas de tratamento e " +
                 "utilização.\n" +
                 "É correto apenas o que se afirma em: \n", "Engenharia de Alimentos", "I e III.", "I e IV.", "I e IV.", "I e IV.", "I e IV.", 2));
         questionDAO.Insert(new Question("(ENADE 2014) Várias indústrias de alimentos utilizam análises físico-químicas\n" +
@@ -345,7 +346,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "5%, que é inerente a possíveis erros de análises.\n" +
                 "V. A redução do valor do pH de um produto durante o\n" +
                 "armazenamento pode ser decorrente do crescimento de micro-organismos.\n" +
-                "É correto apenas o que se afirma em\n", "Engenharia de Alimentos", "I, II e IV.", "I, II e V.", "I, III e IV.", "II, III e V.", "III, IV e V.", 1));
+                "É correto apenas o que se afirma em: \n", "Engenharia de Alimentos", "I, II e IV.", "I, II e V.", "I, III e IV.", "II, III e V.", "III, IV e V.", 1));
         questionDAO.Insert(new Question("(ENADE 2014) Os tratamentos térmicos são usualmente empregados no\n" +
                 "processamento de alimentos com a finalidade de inativar micro-organismos e enzimas,\n" +
                 "prolongando a vida útil dos produtos. Considerando a ampla utilização dos processos\n" +
@@ -367,7 +368,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "frutas e hortaliças, tem como objetivo principal inativar enzimas associadas\n" +
                 "a processos de deterioração, minimizando alterações sensoriais e\n" +
                 "nutricionais durante a estocagem.\n" +
-                "É correto apenas o que se afirma em", "Engenharia de Alimentos", "I, II e III.", "I, III e V.", "I, III e V.", "I, III e V.", "I, III e V.", 2));
+                "É correto apenas o que se afirma em: \n", "Engenharia de Alimentos", "I, II e III.", "I, III e V.", "I, III e V.", "I, III e V.", "I, III e V.", 2));
         questionDAO.Insert(new Question("(ENADE 2014) A corrosão do aço em estruturas de concreto armado\n" +
                 "considerada uma manifestação patológica não muito rara nas construções.\n" +
                 "Nesse contexto, avalie as seguintes afirmações.\n" +
@@ -383,7 +384,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "concreto.\n" +
                 "IV. A utilização de adições minerais em concretos pouco influencia a\n" +
                 "deterioração por corrosão da armadura.\n" +
-                "É correto que se afirma em\n", "Engenharia Civil", "I, II e III, apenas.", "I, II e IV, apenas.", "I, II e IV, apenas.", "I, II e IV, apenas.", "I, II e IV, apenas.", 0));
+                "É correto que se afirma em: \n", "Engenharia Civil", "I, II e III, apenas.", "I, II e IV, apenas.", "I, II e IV, apenas.", "I, II e IV, apenas.", "I, II e IV, apenas.", 0));
         questionDAO.Insert(new Question("(ENADE 2014) Visando o dimensionamento de um bueiro em uma ferrovia, o\n" +
                 "engenheiro encarregado do estudo hidrológico optou pela utilização do Método\n" +
                 "Racional, cuja equação i dada por Q = C.I. A, em que Q é a vazão, C é o coeficiente\n" +
@@ -398,7 +399,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "das características da bacia hidrográfica.\n" +
                 "\uF0B7 A área da bacia hidrográfica é igual a 0,72.\n" +
                 "A partir dos dados coletados no estudo hidrográfico, a vazão Q de projeto para\n" +
-                "o dimensionamento do bueiro, em litros por segundo, será de\n", "Engenharia Civil", "7,6", "14,4.", "25,2.", "27,4.", "36,0.", 0));
+                "o dimensionamento do bueiro, em litros por segundo, será de: \n", "Engenharia Civil", "7,6", "14,4.", "25,2.", "27,4.", "36,0.", 0));
         questionDAO.Insert(new Question("(ENADE 2014) Visando o dimensionamento de um bueiro em uma ferrovia, o\n" +
                 "engenheiro encarregado do estudo hidrológico optou pela utilização do Método\n" +
                 "Racional, cuja equação i dada por Q = C.I. A, em que Q é a vazão, C é o coeficiente\n" +
@@ -413,7 +414,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "das características da bacia hidrográfica.\n" +
                 "\uF0B7 A área da bacia hidrográfica é igual a 0,72.\n" +
                 "A partir dos dados coletados no estudo hidrográfico, a vazão Q de projeto para\n" +
-                "o dimensionamento do bueiro, em litros por segundo, será de\n", "Engenharia Civil", "empilhar, próximo aos apoios da laje, 8 sacos de cimento de 0,5\n" +
+                "o dimensionamento do bueiro, em litros por segundo, será de: \n", "Engenharia Civil", "empilhar, próximo aos apoios da laje, 8 sacos de cimento de 0,5\n" +
                 "kN, um em cima do outro.", "empilhar, próximo aos apoios da laje, 4 sacos de cimento de 0,5\n" +
                 "kN, um em cima do outro.", "posicionar um caixote de 1,0 m x 1,0 m x 0,40 m de madeira\n" +
                 "sobre a região central da laje e enchê-lo com areia grossa", "posicionar sobre a região central da laje uma piscina\n" +
@@ -445,37 +446,37 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "mesma sensibilidade a todas as informações visuais. Tais informações não\n" +
                 "podem ser eliminadas sem prejudicar significativamente a qualidade da\n" +
                 "imagem.\n" +
-                "É correto o que se afirma em", "Engenharia da Computação", "I, apenas.", "III, apenas.", "I e II, apenas.", "II e III, apenas", "I, II e III.\n", 2));
+                "É correto o que se afirma em: \n", "Engenharia da Computação", "I, apenas.", "III, apenas.", "I e II, apenas.", "II e III, apenas", "I, II e III.\n", 2));
         questionDAO.Insert(new Question("(ENADE 2014) O código a seguir mostra um programa escrito na linguagem de\n" +
                 "programação Java.\n" +
                 "public class Java {\n" +
-                "private static void trocaB (String a, String b) {\n" +
-                "String tmp = a;\n" +
-                "a = b;\n" +
-                "b = tmp;\n" +
-                "}\n" +
-                "private static void troca (int array[], String a){\n" +
-                "for (int x = 0; x < array.length. x++){\n" +
-                "array[x] = array[x] * Integer.valueOf(a);\n" +
-                "}\n" +
-                "}\n" +
-                "public static void main (String[] args) {\n" +
-                "int array[] = { 1, 2, 3, 4, 5};\n" +
-                "String a = “2”, b = “5”;\n" +
-                "trocaB (a, b);\n" +
-                "trocaC (array, a);\n" +
-                "System.out.print(a + “ “ + b + “ “);\n" +
-                "for (int x = 0; x < array.length; x++){\n" +
-                "System.out.print(array[x] + “ “);\n" +
-                "}\n" +
-                "}\n" +
+                "   private static void trocaB (String a, String b) {\n" +
+                "        String tmp = a;\n" +
+                "        a = b;\n" +
+                "        b = tmp;\n" +
+                "   }\n" +
+                "   private static void troca (int array[], String a){\n" +
+                "       for (int x = 0; x < array.length. x++){\n" +
+                "       array[x] = array[x] * Integer.valueOf(a);\n" +
+                "       }\n" +
+                "    }\n" +
+                "   public static void main (String[] args) {\n" +
+                "       int array[] = { 1, 2, 3, 4, 5};\n" +
+                "       String a = “2”, b = “5”;\n" +
+                "       trocaB (a, b);\n" +
+                "       trocaC (array, a);\n" +
+                "       System.out.print(a + “ “ + b + “ “);\n" +
+                "       for (int x = 0; x < array.length; x++){\n" +
+                "           System.out.print(array[x] + “ “);\n" +
+                "       }\n" +
+                "   }\n" +
                 "}\n" +
                 "Após ser executado o código, o valor impresso na saída padrão do usuário\n" +
-                "será", "Engenharia da Computação", "5 2 5 10 15 20 25.", "2 5 2 4 6 8 10.", "5 2 2 4 6 8 10.", "5 2 1 2 3 4 5.", "2 5 1 2 3 4 5.", 1));
+                "será: \n", "Engenharia da Computação", "5 2 5 10 15 20 25.", "2 5 2 4 6 8 10.", "5 2 2 4 6 8 10.", "5 2 1 2 3 4 5.", "2 5 1 2 3 4 5.", 1));
         questionDAO.Insert(new Question("(ENADE 2014) Suponha que, para armazenar exatamente 999 999 chaves de\n" +
                 "um índice, um engenheiro de computação tenha escolhido a estrutura de uma árvore \n" +
                 "B, de grau mínimo 5, com todos os nós completos. Nessa situação, a profundidade\n" +
-                "dessa árvore é igual a", "Engenharia da Computação", "4", "5", "6", "7", "8", 1));
+                "dessa árvore é igual a: \n", "Engenharia da Computação", "4", "5", "6", "7", "8", 1));
         questionDAO.Insert(new Question("(ENADE 2014) Até alguns anos atrás, bastava ligar um liquidificador na cozinha\n" +
                 "enquanto uma TV estava ligada na sala para perceber a interferência, mas o\n" +
                 "desenvolvimento de tecnologias já conseguiu diminui r, ou até mesmo eliminar a\n" +
@@ -498,7 +499,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "IV. Aterramento, blindagem e filtragem são soluções que podem ser\n" +
                 "utilizadas no projeto com o intuito de se controlar ou suprimir a interferência\n" +
                 "eletromagnética.\n" +
-                "É correto apenas o que se afirma em", "Engenharia Elétrica", "I e IV.", "II e III.\n", "III e IV.", "I, II e III.", "I, II e IV", 4));
+                "É correto apenas o que se afirma em: \n", "Engenharia Elétrica", "I e IV.", "II e III.\n", "III e IV.", "I, II e III.", "I, II e IV", 4));
         questionDAO.Insert(new Question("(ENADE 2014) A levitação magnética (maglev) é uma forma de levitar objetos,\n" +
                 "a partir de campos magnéticos, de modo silencioso e sem necessidade do uso de\n" +
                 "combustíveis. Países, como Japão e Alemanha, têm investido bilhões de dólares em\n" +
@@ -531,7 +532,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "III. A luz emitida pelo LED tem comprimento de onda relacionado\n" +
                 "ao tipo de material utilizado na dopagem do semicondutor, por exemplo,\n" +
                 "gálio, alumínio, arsênio, fósforo, índio ou nitrogênio.\n" +
-                "É correto o que se afirma em\n", "Engenharia Elétrica", "I, apenas.", "I, apenas.", "I, apenas.", "I, apenas.", "I, apenas.", 3));
+                "É correto o que se afirma em: \n", "Engenharia Elétrica", "I, apenas.", "I, apenas.", "I, apenas.", "I, apenas.", "I, apenas.", 3));
         questionDAO.Insert(new Question("(ENADE 2014) As turbinas Pelton são turbinas de ação que recebem um jato\n" +
                 "de fluido proveniente de um injetor. Esse jato incide tangencialmente ao rotor em pás\n" +
                 "distribuídas ao longo de sua periferia. Sabendo que a força aplicada nas pás é\n" +
@@ -544,7 +545,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "III. Para um mesmo formato e tamanho de pás, quanto maior a\n" +
                 "velocidade do fluido na saída do bocal do injetor, maior será a força\n" +
                 "tangencial.\n" +
-                "É correto o que se afirma em\n", "Engenharia Mecânica", "I, apenas", "III, apenas", "I e II, apenas.", "II e III, apenas.", "I, II e III.", 3));
+                "É correto o que se afirma em: \n", "Engenharia Mecânica", "I, apenas", "III, apenas", "I e II, apenas.", "II e III, apenas.", "I, II e III.", 3));
         questionDAO.Insert(new Question("(ENADE 2014) Um metal, em sua condição encruada, possui energia interna\n" +
                 "elevada em relação ao metal não-deformado plasticamente. Aumentando-se a\n" +
                 "temperatura, existe a tendência de o metal retornar à condição mais estável de menor\n" +
@@ -560,7 +561,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "II. A estampagem das latas de refrigerantes é realizada a frio,\n" +
                 "ocorrendo encruamento em cada etapa, com alteração das propriedades\n" +
                 "mecânicas do material da chapa.\n" +
-                "A respeito dessas asserções, assinale a opção correta.", "Engenharia Mecânica", "As asserções I e II são proposições verdadeiras, e a II é uma\n" +
+                "A respeito dessas asserções, assinale a opção correta.\n", "Engenharia Mecânica", "As asserções I e II são proposições verdadeiras, e a II é uma\n" +
                 "justificativa correta da I.\n", "As asserções I e II são proposições verdadeiras, mas a II não é\n" +
                 "uma justificativa correta da I.\n", "As asserções I e II são proposições verdadeiras, mas a II não é\n" +
                 "uma justificativa correta da I.\n", "A asserção I é uma proposição falsa, e a II é uma proposição\n" +
@@ -573,7 +574,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "eram soldados, usando-se eletrodos revestidos. A utilização da mesma técnica,\n" +
                 "mantendo-se os parâmetros tradicionais, não funcionou bem para o alumínio.\n" +
                 "Na situação descrita acima, o processo mais adequado para atender a\n" +
-                "demanda de produção do fabricante é o ", "Engenharia Mecânica", "TIG.", "MIG.", "MAG.", "oxiacetileno.", "eletrodo revestido com diminuição do seu diâmetro e utilização\n" +
+                "demanda de produção do fabricante é o: \n", "Engenharia Mecânica", "TIG.", "MIG.", "MAG.", "oxiacetileno.", "eletrodo revestido com diminuição do seu diâmetro e utilização\n" +
                 "de transformador de solda convencional.", 0));
         questionDAO.Insert(new Question("(ENADE 2014) Sensores ultrassônicos são usados na medição de grandezas\n" +
                 "como distância e nível. Alguns desses sensores emitem um sinal na frequência de 40\n" +
@@ -589,7 +590,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "IV. Para uma leitura adequada do sinal desse sensor em um\n" +
                 "sistema de aquisição de dados, deve-se utilizar uma taxa de amostragem\n" +
                 "de no mínimo 80 kHz de forma a evitar o efeito aliasing.\n" +
-                "É correto apenas o que se afirma em", "Engenharia Mecatrônica", "I e IV.", "II e III.", "III e IV", "I, II e III.\n", "I, II e IV.\n", 0));
+                "É correto apenas o que se afirma em: \n", "Engenharia Mecatrônica", "I e IV.", "II e III.", "III e IV", "I, II e III.\n", "I, II e IV.\n", 0));
         questionDAO.Insert(new Question("(ENADE 2014) Um engenheiro de mecatrônica necessita especificar um\n" +
                 "transdutor de temperatura para um projeto de controle automático de um forno. É\n" +
                 "requisito de projeto que o controlador lógico programável (CLP) esteja localizado na\n" +
@@ -604,7 +605,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "II. No padrão 4 mA a 20 mA é possível identificar perda de sinal\n" +
                 "nos cabos de transmissão, como, por exemplo, em problemas de\n" +
                 "rompimento de cabo ou desconexão com o CLP.\n" +
-                "A respeito dessas asserções, assinale a opção correta.", "Engenharia Mecatrônica", "As asserções I e II são proposições verdadeiras, e a II é uma\n" +
+                "A respeito dessas asserções, assinale a opção correta.\n", "Engenharia Mecatrônica", "As asserções I e II são proposições verdadeiras, e a II é uma\n" +
                 "justificativa correta da I.", "As asserções I e II são proposições verdadeiras, mas a II não é\n" +
                 "uma justificativa correta da I.", "A asserção I é uma proposição verdadeira, e a II é uma\n" +
                 "proposição falsa.", "A asserção I ê uma proposição falsa, e a II é uma proposição\n" +
@@ -614,7 +615,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "necessita de pilotos embarcados para ser guiada. Esses veiculos são controlados por\n" +
                 "meios eletrônicos e computacionais, sob a supervisão humana remota ou sem a sua\n" +
                 "intervenção.\n" +
-                "Disponível em: <http://pt.wikipedia.org/>. Acesso em: 13 ago. 2014 (adaptado).\n" +
                 "A respeito da navegação autônoma dos VANTs, avalie as afirmações a seguir.\n" +
                 "I. O GPS tem como funcionalidade básica determinar coordenadas\n" +
                 "geográficas.\n" +
@@ -659,7 +659,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "IV. É responsável pela decisão de encerramento de projetos.\n" +
                 "V. Facilita o compartilhamento de recursos, métodos, ferramentas e\n" +
                 "técnicas nos projetos sob seu domínio. \n" +
-                "É correto apenas o que se afirma em", "Engenharia de Produção", "II e IV.", "III e V", "I, III e IV.", "I, II, III e V.", "I, II, IV e V.", 1));
+                "É correto apenas o que se afirma em: \n", "Engenharia de Produção", "II e IV.", "III e V", "I, III e IV.", "I, II, III e V.", "I, II, IV e V.", 1));
         questionDAO.Insert(new Question("(ENADE 2014) O conceito de produtividade global considera que os benefícios\n" +
                 "obtidos pela melhoria dos processos devem ser mensurados no conjunto,\n" +
                 "considerando os fatores econômicos, sociais e ambientais de todos os setores ou\n" +
@@ -678,7 +678,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "IV. É responsável pela decisão de encerramento de projetos.\n" +
                 "V. Facilita o compartilhamento de recursos, métodos, ferramentas e\n" +
                 "técnicas nos projetos sob seu domínio. \n" +
-                "É correto apenas o que se afirma em", "Engenharia de Produção", "I e III.", "II e III.", "II e IV.", "I, II e IV.", "I, III e IV.\n", 2));
+                "É correto apenas o que se afirma em: \n", "Engenharia de Produção", "I e III.", "II e III.", "II e IV.", "I, II e IV.", "I, III e IV.\n", 2));
         questionDAO.Insert(new Question("(ENADE 2014) O conceito de produtividade global considera que os benefícios\n" +
                 "obtidos pela melhoria dos processos devem ser mensurados no conjunto,\n" +
                 "considerando os fatores econômicos, sociais e ambientais de todos os setores ou\n" +
@@ -697,7 +697,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "IV. É responsável pela decisão de encerramento de projetos.\n" +
                 "V. Facilita o compartilhamento de recursos, métodos, ferramentas e\n" +
                 "técnicas nos projetos sob seu domínio. \n" +
-                "É correto apenas o que se afirma em", "Engenharia Química", "I, apenas.", "II, apenas.", "I e III, apenas.", "II e III, apenas.\n", "I, II e III.", 2));
+                "É correto apenas o que se afirma em: \n", "Engenharia Química", "I, apenas.", "II, apenas.", "I e III, apenas.", "II e III, apenas.\n", "I, II e III.", 2));
         questionDAO.Insert(new Question("(ENADE 2014) O conceito de produtividade global considera que os benefícios\n" +
                 "obtidos pela melhoria dos processos devem ser mensurados no conjunto,\n" +
                 "considerando os fatores econômicos, sociais e ambientais de todos os setores ou\n" +
@@ -716,7 +716,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "IV. É responsável pela decisão de encerramento de projetos.\n" +
                 "V. Facilita o compartilhamento de recursos, métodos, ferramentas e\n" +
                 "técnicas nos projetos sob seu domínio. \n" +
-                "É correto apenas o que se afirma em", "Engenharia Química", "I e II.", "I e IV.", "II e III.", "I, III e IV", "II, III e IV.", 3));
+                "É correto apenas o que se afirma em: \n", "Engenharia Química", "I e II.", "I e IV.", "II e III.", "I, III e IV", "II, III e IV.", 3));
         questionDAO.Insert(new Question("(ENADE 2014) O conceito de produtividade global considera que os benefícios\n" +
                 "obtidos pela melhoria dos processos devem ser mensurados no conjunto,\n" +
                 "considerando os fatores econômicos, sociais e ambientais de todos os setores ou\n" +
@@ -735,7 +735,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 "IV. É responsável pela decisão de encerramento de projetos.\n" +
                 "V. Facilita o compartilhamento de recursos, métodos, ferramentas e\n" +
                 "técnicas nos projetos sob seu domínio. \n" +
-                "É correto apenas o que se afirma em", "Engenharia Química", "determinar o erro antes que qualquer ação de controle possa ser\n" +
+                "É correto apenas o que se afirma em: \n", "Engenharia Química", "determinar o erro antes que qualquer ação de controle possa ser\n" +
                 "realizada.\n", "relacionar a sequência de uma determinada produção, podendo\n" +
                 "envolver uma ou mais variáveis.\n", "exercer uma influência direta no processo, promovendo a\n" +
                 "mudança requerida na variável controlada.", "realizar a medida e a conversão de uma variável em termos de\n" +

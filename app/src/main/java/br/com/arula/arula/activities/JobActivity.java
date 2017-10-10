@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.com.arula.arula.R;
 import br.com.arula.arula.model.Job;
@@ -59,8 +60,6 @@ public class JobActivity extends AppCompatActivity {
         hour.setText(job.getHour());
         desc.setText(job.getDesc());
         req.setText(job.getReq());
-
-
     }
 
     @Override
@@ -78,6 +77,7 @@ public class JobActivity extends AppCompatActivity {
         }
         if(item.getItemId() == R.id.menu_check) {
             job.setControl(true);
+            Toast.makeText(this, "Inscrito na vaga!", Toast.LENGTH_LONG).show();
         }
 
         return super.onOptionsItemSelected(item);
