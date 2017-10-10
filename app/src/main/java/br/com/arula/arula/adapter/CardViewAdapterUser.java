@@ -1,7 +1,9 @@
 package br.com.arula.arula.adapter;
 
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +57,7 @@ public class CardViewAdapterUser extends RecyclerView.Adapter<CardViewAdapterUse
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         title.setText(users[position].getName());
+
         setImage(users[position]);
         score.setText(users[position].getScore().toString());
         req.setText(users[position].getReq());
@@ -63,25 +66,25 @@ public class CardViewAdapterUser extends RecyclerView.Adapter<CardViewAdapterUse
     }
 
     public void setImage(User user) {
-        if(user.getImage().equals("1"))
+        if (user.getImage().equals("1"))
             image.setImageResource(R.drawable.a1);
-        if(user.getImage().equals("2"))
+        if (user.getImage().equals("2"))
             image.setImageResource(R.drawable.a2);
-        if(user.getImage().equals("3"))
+        if (user.getImage().equals("3"))
             image.setImageResource(R.drawable.a3);
-        if(user.getImage().equals("4"))
+        if (user.getImage().equals("4"))
             image.setImageResource(R.drawable.a4);
-        if(user.getImage().equals("5"))
+        if (user.getImage().equals("5"))
             image.setImageResource(R.drawable.a5);
-        if(user.getImage().equals("6"))
+        if (user.getImage().equals("6"))
             image.setImageResource(R.drawable.a6);
-        if(user.getImage().equals("7"))
+        if (user.getImage().equals("7"))
             image.setImageResource(R.drawable.a7);
-        if(user.getImage().equals("8"))
+        if (user.getImage().equals("8"))
             image.setImageResource(R.drawable.a8);
-        if(user.getImage().equals("9"))
+        if (user.getImage().equals("9"))
             image.setImageResource(R.drawable.a9);
-        if(user.getImage().equals("10"))
+        if (user.getImage().equals("10"))
             image.setImageResource(R.drawable.a10);
     }
 

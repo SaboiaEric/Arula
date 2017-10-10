@@ -3,7 +3,9 @@ package br.com.arula.arula.activities;
 
 import android.app.SearchManager;
 import android.content.Intent;
+
 import android.media.Image;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -17,15 +19,22 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+
 import java.util.ArrayList;
 import java.util.LinkedList;
+
 import java.util.List;
 
 
 import br.com.arula.arula.R;
 import br.com.arula.arula.RecyclerViewClickPosition;
+
 import br.com.arula.arula.adapter.CardViewAdapterCourse;
 import br.com.arula.arula.adapter.CardViewAdapterJob;
+
+import br.com.arula.arula.adapter.CardViewAdapterJob;
+
+
 import br.com.arula.arula.adapter.CardViewAdapterUser;
 import br.com.arula.arula.dao.JobDAO;
 import br.com.arula.arula.dao.QuestionDAO;
@@ -71,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         jobDAO = new JobDAO(this);
         questionDAO = new QuestionDAO(this);
 
+
         courses = generateCourses();
 
 
@@ -80,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         jobs = jobDAO.Read();
         users = userDAO.Read();
         questions = questionDAO.Read();
+
 
         generateQuestions();
 
@@ -118,7 +129,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                     questions.clear();
                     for(Question q : questionDAO.Read())
                         questions.add(q);
+
                     loadListCourses();
+
                     controlNavigation = 3;
                     return true;
                 case R.id.navigation_rankings:
@@ -141,9 +154,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_generate, menu);
 
-        //final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.menu_busca));
-        //SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
-        //searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+//        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.menu_busca));
+//        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -163,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
                 generateCourses();
                 generateQuestions();
                 loadListCourses();
+
                 break;
             case R.id.menu_profile:
                 Intent profile = new Intent(MainActivity.this, ProfileActivity.class);
@@ -188,12 +203,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
             intentJobActivity.putExtra("job", job);
             startActivity(intentJobActivity);
         } else if(controlNavigation == 3) {
-            String course = generateCourses().get(position);
+            String course = courses.get(position);
             Intent intentQuestionActivity = new Intent(MainActivity.this, QuestionActivity.class);
             intentQuestionActivity.putExtra("course", course);
-            intentQuestionActivity.putExtra("corrects", 0);
             intentQuestionActivity.putExtra("count", 0);
-
+            intentQuestionActivity.putExtra("corrects", 0);
             startActivity(intentQuestionActivity);
         } else if(controlNavigation == 4) {
             User user = users.get(position);
@@ -212,6 +226,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
         mAdapter = new CardViewAdapterUser(users, this);
         list.setAdapter(mAdapter);
     }
+
 
     public void loadListCourses() {
         mAdapter = new CardViewAdapterCourse(courses, this);
@@ -234,6 +249,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     }
 
     public void generateUsers() {
+
 
         List<User> usersAux = new ArrayList<>();
         usersAux.add(new User("Luiz Fernando", "Engenharia da Computação", 600.0, "", "C# | Python | Java", "4"));

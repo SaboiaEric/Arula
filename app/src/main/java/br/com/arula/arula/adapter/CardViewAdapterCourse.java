@@ -1,3 +1,4 @@
+
 package br.com.arula.arula.adapter;
 
 import android.support.v7.widget.RecyclerView;
@@ -67,3 +68,5 @@ public class CardViewAdapterCourse extends RecyclerView.Adapter<CardViewAdapterC
         }
     }
 }
+
+

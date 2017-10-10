@@ -22,6 +22,7 @@ public class QuestionDAO extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         String sql = "CREATE TABLE Questions (Id INTEGER PRIMARY KEY, Course TEXT, Question TEXT, resA TEXT, resB TEXT, resC TEXT, resD TEXT, resE TEXT, correctAnswer INTEGER);";
         db.execSQL(sql);
     }

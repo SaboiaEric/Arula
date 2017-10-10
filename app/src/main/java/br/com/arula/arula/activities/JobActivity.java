@@ -83,3 +83,4 @@ public class JobActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+

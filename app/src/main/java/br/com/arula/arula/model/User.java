@@ -17,7 +17,6 @@ public class User implements Serializable{
     private Double Score;
     private String Desc;
     private String Req;
-
     public String getImage() {
         return Image;
     }
