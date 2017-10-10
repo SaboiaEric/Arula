@@ -11,19 +11,30 @@ public class Job implements Serializable{
     private String Name;
     private String Desc;
     private Double Salary;
-    private char[] Image;
+    private String Image;
     private String CompanyName;
     private String Type;
     private String Hour;
     private String Req;
     private boolean control;
 
-    public Job(String name) {
+    public Job(String name, String companyName, Double salary, String type, String hour, String desc, String req, String image) {
         this.Name = name;
+        this.CompanyName = companyName;
+        this.Salary = salary;
+        this.Type = type;
+        this.Hour = hour;
+        this.Desc = desc;
+        this.Req = req;
+        this.Image = image;
     }
 
 
     public Job() {}
+
+    public Job(String name) {
+        this.Name = name;
+    }
 
     public boolean getControl() {
         return control;
@@ -33,11 +44,11 @@ public class Job implements Serializable{
         this.control = control;
     }
 
-    public char[] getImage() {
+    public String getImage() {
         return Image;
     }
 
-    public void setImage(char[] image) {
+    public void setImage(String image) {
         Image = image;
     }
 

@@ -12,6 +12,7 @@ import java.util.List;
 import br.com.arula.arula.R;
 import br.com.arula.arula.RecyclerViewClickPosition;
 import br.com.arula.arula.model.Job;
+import br.com.arula.arula.model.User;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -54,11 +55,34 @@ public class CardViewAdapterJob extends RecyclerView.Adapter<CardViewAdapterJob.
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         name.setText(jobs[position].getName());
-        //image.setImageBitmap();
+        setImage(jobs[position]);
         company.setText(jobs[position].getCompanyName());
         salary.setText(jobs[position].getSalary().toString());
         req.setText(jobs[position].getReq());
 
+    }
+
+    public void setImage(Job job) {
+//        if (job.getImage().equals("1"))
+//            image.setImageResource(R.drawable.j1);
+//        if (job.getImage().equals("2"))
+//            image.setImageResource(R.drawable.j2);
+//        if (job.getImage().equals("3"))
+//            image.setImageResource(R.drawable.j3);
+//        if (job.getImage().equals("4"))
+//            image.setImageResource(R.drawable.j4);
+//        if (job.getImage().equals("5"))
+//            image.setImageResource(R.drawable.j5);
+//        if (job.getImage().equals("6"))
+//            image.setImageResource(R.drawable.j6);
+//        if (job.getImage().equals("7"))
+//            image.setImageResource(R.drawable.j7);
+//        if (job.getImage().equals("8"))
+//            image.setImageResource(R.drawable.j8);
+//        if (job.getImage().equals("9"))
+//            image.setImageResource(R.drawable.j9);
+//        if (job.getImage().equals("10"))
+//            image.setImageResource(R.drawable.j10);
     }
 
     @Override

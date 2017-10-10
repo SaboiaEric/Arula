@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
 
 
 
-            
+
         }
 
         return false;
@@ -238,6 +238,23 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     }
 
     public void generateJobs() {
+//        List<Job> jobsAux = new ArrayList<>();
+//
+//        jobsAux.add(new Job("", "", , "", "", "", "", "1"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "2"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "3"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "4"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "5"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "6"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "7"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "8"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "9"));
+//        jobsAux.add(new Job("", "", , "", "", "", "", "10"));
+//
+//        for(Job j : jobsAux)
+//            jobDAO.Insert(j);
+
+
         for(int i = 0; i < 5; i++) {
             Job job = new Job("Job"+i);
             job.setCompanyName("Facebook");
@@ -253,8 +270,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     }
 
     public void generateUsers() {
-
-
         List<User> usersAux = new ArrayList<>();
         usersAux.add(new User("Luiz Fernando", "Engenharia da Computação", 600.0, "", "C# | Python | Java", "4"));
         usersAux.add(new User("Angela Maria", "Engenharia Mecatrônica", 1200.0, "", "C | Java", "1"));

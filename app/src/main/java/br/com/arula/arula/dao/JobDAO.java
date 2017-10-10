@@ -59,7 +59,7 @@ public class JobDAO extends SQLiteOpenHelper {
             job.setName(c.getString(c.getColumnIndex("Name")));
             job.setDesc(c.getString(c.getColumnIndex("Desc")));
             job.setSalary(c.getDouble(c.getColumnIndex("Salary")));
-            //job.setImage(c.getString(c.getColumnIndex("Image")));
+            job.setImage(c.getString(c.getColumnIndex("Image")));
             job.setCompanyName(c.getString(c.getColumnIndex("CompanyName")));
             job.setType(c.getString(c.getColumnIndex("Type")));
             job.setHour(c.getString(c.getColumnIndex("Hour")));
@@ -102,7 +102,7 @@ public class JobDAO extends SQLiteOpenHelper {
         data.put("Name", job.getName());
         data.put("Desc", job.getDesc());
         data.put("Salary", job.getSalary());
-        //data.put("Image", job.getImage());
+        data.put("Image", job.getImage());
         data.put("CompanyName", job.getCompanyName());
         data.put("Type", job.getType());
         data.put("Hour", job.getHour());
