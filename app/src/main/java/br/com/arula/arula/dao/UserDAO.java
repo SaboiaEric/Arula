@@ -64,7 +64,11 @@ public class UserDAO extends SQLiteOpenHelper {
             user.setEmail(c.getString(c.getColumnIndex("Email")));
             user.setCPF(c.getString(c.getColumnIndex("CPF")));
             user.setAddress(c.getString(c.getColumnIndex("Address")));
+<<<<<<< HEAD
+            user.setImage(c.getString(c.getColumnIndex("Image")));
+=======
             //user.setImage(c.getString(c.getColumnIndex("Image")));
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
             user.setFormation(c.getString(c.getColumnIndex("Formation")));
             user.setScore(c.getDouble(c.getColumnIndex("Score")));
             user.setDesc(c.getString(c.getColumnIndex("Desc")));
@@ -107,9 +111,15 @@ public class UserDAO extends SQLiteOpenHelper {
         data.put("Email", user.getEmail());
         data.put("CPF", user.getCPF());
         data.put("Address", user.getAddress());
+<<<<<<< HEAD
+        data.put("Image", user.getImage());
+        data.put("Formation", user.getFormation());
+        data.put("Score", user.getScore());
+=======
         //data.put("Image", user.getImage());
         data.put("Formation", user.getFormation());
         data.put("Score", user.getFormation());
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
         data.put("Desc", user.getDesc());
         data.put("Req", user.getReq());
 

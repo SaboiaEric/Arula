@@ -22,7 +22,11 @@ public class QuestionDAO extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
+<<<<<<< HEAD
+        String sql = "CREATE TABLE Questions (Id INTEGER PRIMARY KEY, Course TEXT, Question TEXT, resA TEXT, resB TEXT, resC TEXT, resD TEXT, resE TEXT, correctAnswer INTEGER);";
+=======
         String sql = "CREATE TABLE Questions (Id INTEGER PRIMARY KEY, Name TEXT, Question TEXT, Answers TEXT, correctAnswer INTEGER);";
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
         db.execSQL(sql);
     }
 
@@ -47,10 +51,21 @@ public class QuestionDAO extends SQLiteOpenHelper{
             Question question = new Question();
 
             question.setId(c.getLong(c.getColumnIndex("Id")));
+<<<<<<< HEAD
+            question.setQuestion(c.getString(c.getColumnIndex("Question")));
+            question.setCorrectAnswer(c.getInt(c.getColumnIndex("correctAnswer")));
+            question.setCourse(c.getString(c.getColumnIndex("Course")));
+            question.setResA(c.getString(c.getColumnIndex("resA")));
+            question.setResB(c.getString(c.getColumnIndex("resB")));
+            question.setResC(c.getString(c.getColumnIndex("resC")));
+            question.setResD(c.getString(c.getColumnIndex("resD")));
+            question.setResE(c.getString(c.getColumnIndex("resE")));
+=======
             question.setName(c.getString(c.getColumnIndex("Name")));
             question.setQuestion(c.getString(c.getColumnIndex("Question")));
             question.setAnswers(c.getString(c.getColumnIndex("Answers")));
             question.setCorrectAnswer(c.getInt(c.getColumnIndex("correctAnswer")));
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
 
             questions.add(question);
         }
@@ -85,10 +100,21 @@ public class QuestionDAO extends SQLiteOpenHelper{
 
     private ContentValues getContentValuesQuestions(Question question) {
         ContentValues data = new ContentValues();
+<<<<<<< HEAD
+        data.put("Question", question.getQuestion());
+        data.put("correctAnswer", question.getCorrectAnswer());
+        data.put("Course", question.getCourse());
+        data.put("resA", question.getResA());
+        data.put("resB", question.getResB());
+        data.put("resC", question.getResC());
+        data.put("resD", question.getResD());
+        data.put("resE", question.getResE());
+=======
         data.put("Name", question.getName());
         data.put("Question", question.getQuestion());
         data.put("Answers", question.getAnswers());
         data.put("correctAnswer", question.getCorrectAnswer());
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
 
         return data;
     }

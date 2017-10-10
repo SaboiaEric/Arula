@@ -12,17 +12,29 @@ public class User implements Serializable{
     private String Email;
     private String CPF;
     private String Address;
+<<<<<<< HEAD
+    private String Image;
+=======
     private char[] Image;
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
     private String Formation;
     private Double Score;
     private String Desc;
     private String Req;
 
+<<<<<<< HEAD
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+=======
     public char[] getImage() {
         return Image;
     }
 
     public void setImage(char[] image) {
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
         Image = image;
     }
 
@@ -84,8 +96,18 @@ public class User implements Serializable{
 
     public User() {}
 
+<<<<<<< HEAD
+    public User (String name, String formation, Double score, String desc, String req, String image) {
+        this.Name = name;
+        this.Formation = formation;
+        this.Score = score;
+        this.Desc = desc;
+        this.Req = req;
+        this.Image = image;
+=======
     public User (String name) {
         this.Name = name;
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
     }
 
     public Long getId() {
