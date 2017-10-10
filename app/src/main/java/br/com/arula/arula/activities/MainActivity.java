@@ -190,6 +190,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
 //                Intent settings = new Intent(MainActivity.this, SettingsActivity.class);
 //                startActivity(settings);
 //                break;
+
+            
         }
 
         return false;
