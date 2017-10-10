@@ -24,7 +24,18 @@ public class UserDAO extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Users (Id INTEGER PRIMARY KEY, Name TEXT, Email TEXT, CPF TEXT, Address TEXT);";
+        String sql = "CREATE TABLE Users (" +
+                "Id INTEGER PRIMARY KEY, " +
+                "Name TEXT, " +
+                "Email TEXT, " +
+                "CPF TEXT, " +
+                "Address TEXT, " +
+                "Image TEXT, " +
+                "Formation TEXT, " +
+                "Score NUMERIC(18,0), " +
+                "Desc TEXT, " +
+                "Req TEXT" +
+                ");";
         db.execSQL(sql);
     }
 
@@ -53,6 +64,11 @@ public class UserDAO extends SQLiteOpenHelper {
             user.setEmail(c.getString(c.getColumnIndex("Email")));
             user.setCPF(c.getString(c.getColumnIndex("CPF")));
             user.setAddress(c.getString(c.getColumnIndex("Address")));
+            user.setImage(c.getString(c.getColumnIndex("Image")));
+            user.setFormation(c.getString(c.getColumnIndex("Formation")));
+            user.setScore(c.getDouble(c.getColumnIndex("Score")));
+            user.setDesc(c.getString(c.getColumnIndex("Desc")));
+            user.setReq(c.getString(c.getColumnIndex("Req")));
 
             users.add(user);
         }
@@ -91,6 +107,11 @@ public class UserDAO extends SQLiteOpenHelper {
         data.put("Email", user.getEmail());
         data.put("CPF", user.getCPF());
         data.put("Address", user.getAddress());
+        data.put("Image", user.getImage());
+        data.put("Formation", user.getFormation());
+        data.put("Score", user.getScore());
+        data.put("Desc", user.getDesc());
+        data.put("Req", user.getReq());
 
         return data;
     }

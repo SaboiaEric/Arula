@@ -22,7 +22,16 @@ public class JobDAO extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Jobs (Id INTEGER PRIMARY KEY, Name TEXT, Desc TEXT, Salary numeric(18,0));";
+        String sql = "CREATE TABLE Jobs (" +
+                "Id INTEGER PRIMARY KEY, " +
+                "Name TEXT, Desc TEXT, " +
+                "Salary numeric(18,0), " +
+                "Image TEXT, " +
+                "CompanyName TEXT, " +
+                "Type TEXT, " +
+                "Hour TEXT, " +
+                "Req TEXT " +
+                ");";
         db.execSQL(sql);
     }
 
@@ -50,6 +59,11 @@ public class JobDAO extends SQLiteOpenHelper {
             job.setName(c.getString(c.getColumnIndex("Name")));
             job.setDesc(c.getString(c.getColumnIndex("Desc")));
             job.setSalary(c.getDouble(c.getColumnIndex("Salary")));
+            //job.setImage(c.getString(c.getColumnIndex("Image")));
+            job.setCompanyName(c.getString(c.getColumnIndex("CompanyName")));
+            job.setType(c.getString(c.getColumnIndex("Type")));
+            job.setHour(c.getString(c.getColumnIndex("Hour")));
+            job.setReq(c.getString(c.getColumnIndex("Req")));
 
 
             jobs.add(job);
@@ -88,7 +102,11 @@ public class JobDAO extends SQLiteOpenHelper {
         data.put("Name", job.getName());
         data.put("Desc", job.getDesc());
         data.put("Salary", job.getSalary());
-
+        //data.put("Image", job.getImage());
+        data.put("CompanyName", job.getCompanyName());
+        data.put("Type", job.getType());
+        data.put("Hour", job.getHour());
+        data.put("Req", job.getReq());
 
         return data;
     }

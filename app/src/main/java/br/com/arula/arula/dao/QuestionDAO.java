@@ -22,7 +22,7 @@ public class QuestionDAO extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE Questions (Id INTEGER PRIMARY KEY, Name TEXT, Question TEXT, Answers TEXT, correctAnswer INTEGER);";
+        String sql = "CREATE TABLE Questions (Id INTEGER PRIMARY KEY, Course TEXT, Question TEXT, resA TEXT, resB TEXT, resC TEXT, resD TEXT, resE TEXT, correctAnswer INTEGER);";
         db.execSQL(sql);
     }
 
@@ -47,10 +47,14 @@ public class QuestionDAO extends SQLiteOpenHelper{
             Question question = new Question();
 
             question.setId(c.getLong(c.getColumnIndex("Id")));
-            question.setName(c.getString(c.getColumnIndex("Name")));
             question.setQuestion(c.getString(c.getColumnIndex("Question")));
-            question.setAnswers(c.getString(c.getColumnIndex("Answers")));
             question.setCorrectAnswer(c.getInt(c.getColumnIndex("correctAnswer")));
+            question.setCourse(c.getString(c.getColumnIndex("Course")));
+            question.setResA(c.getString(c.getColumnIndex("resA")));
+            question.setResB(c.getString(c.getColumnIndex("resB")));
+            question.setResC(c.getString(c.getColumnIndex("resC")));
+            question.setResD(c.getString(c.getColumnIndex("resD")));
+            question.setResE(c.getString(c.getColumnIndex("resE")));
 
             questions.add(question);
         }
@@ -85,10 +89,14 @@ public class QuestionDAO extends SQLiteOpenHelper{
 
     private ContentValues getContentValuesQuestions(Question question) {
         ContentValues data = new ContentValues();
-        data.put("Name", question.getName());
         data.put("Question", question.getQuestion());
-        data.put("Answers", question.getAnswers());
         data.put("correctAnswer", question.getCorrectAnswer());
+        data.put("Course", question.getCourse());
+        data.put("resA", question.getResA());
+        data.put("resB", question.getResB());
+        data.put("resC", question.getResC());
+        data.put("resD", question.getResD());
+        data.put("resE", question.getResE());
 
         return data;
     }

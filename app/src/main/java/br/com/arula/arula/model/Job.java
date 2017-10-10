@@ -9,30 +9,86 @@ import java.io.Serializable;
 public class Job implements Serializable{
     private Long Id;
     private String Name;
-    private String desc;
-    private Double salary;
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public Double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
+    private String Desc;
+    private Double Salary;
+    private char[] Image;
+    private String CompanyName;
+    private String Type;
+    private String Hour;
+    private String Req;
+    private boolean control;
 
     public Job(String name) {
         this.Name = name;
     }
 
+
     public Job() {}
+
+    public boolean getControl() {
+        return control;
+    }
+
+    public void setControl(boolean control) {
+        this.control = control;
+    }
+
+    public char[] getImage() {
+        return Image;
+    }
+
+    public void setImage(char[] image) {
+        Image = image;
+    }
+
+    public String getCompanyName() {
+        return CompanyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        CompanyName = companyName;
+    }
+
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
+    }
+
+    public String getHour() {
+        return Hour;
+    }
+
+    public void setHour(String hour) {
+        Hour = hour;
+    }
+
+    public String getReq() {
+        return Req;
+    }
+
+    public void setReq(String req) {
+        Req = req;
+    }
+
+    public String getDesc() {
+        return Desc;
+    }
+
+    public void setDesc(String desc) {
+        this.Desc = desc;
+    }
+
+    public Double getSalary() {
+        return Salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.Salary = salary;
+    }
+
 
     public Long getId() {
         return Id;

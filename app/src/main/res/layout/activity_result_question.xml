@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.arula.arula.activities.ResultQuestionActivity"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/correctAnswersResultActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Você acertou X questões!"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:textColor="#fff"
+            android:textSize="28dp"/>
+
+        <TextView
+            android:id="@+id/scoreResultActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXX pontos foram adicionados ao seu perfil."
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="90dp"
+            android:gravity="center_horizontal"
+            android:textColor="#Fff"
+            android:textSize="22dp"/>
+
+        <Button
+            android:id="@+id/btnResultActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Voltar para a tela inicial"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

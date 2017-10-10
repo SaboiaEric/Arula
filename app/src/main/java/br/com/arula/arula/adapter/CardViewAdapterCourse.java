@@ -19,9 +19,9 @@ import butterknife.ButterKnife;
  * Created by Rafael Felipe on 04/10/2017.
  */
 
-public class CardViewAdapterQuestion extends RecyclerView.Adapter<CardViewAdapterQuestion.ViewHolder> {
+public class CardViewAdapterCourse extends RecyclerView.Adapter<CardViewAdapterCourse.ViewHolder> {
 
-    public Question[] questions;
+    public String[] courses;
     private static RecyclerViewClickPosition mPositionInterface;
 
 
@@ -30,8 +30,8 @@ public class CardViewAdapterQuestion extends RecyclerView.Adapter<CardViewAdapte
     @BindView(R.id.jobImage)
     ImageView image;
 
-    public CardViewAdapterQuestion(List<Question> questions, RecyclerViewClickPosition positionInterface) {
-        this.questions = questions.toArray(new Question[questions.size()]);
+    public CardViewAdapterCourse(List<String> courses, RecyclerViewClickPosition positionInterface) {
+        this.courses = courses.toArray(new String[courses.size()]);
         mPositionInterface = positionInterface;
     }
 
@@ -45,13 +45,13 @@ public class CardViewAdapterQuestion extends RecyclerView.Adapter<CardViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        title.setText(questions[position].getName());
+        title.setText(courses[position]);
         //image.setVisibility((!jobs[position].getAudioPath().isEmpty()) ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Override
     public int getItemCount() {
-        return questions.length;
+        return courses.length;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
