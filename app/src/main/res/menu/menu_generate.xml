@@ -18,20 +18,36 @@
         android:icon="@mipmap/ic_launcher"
         app:showAsAction="collapseActionView"/>
 
+<<<<<<< HEAD
+    <!--<item-->
+        <!--android:id="@+id/menu_busca"-->
+        <!--android:title="Busca"-->
+        <!--android:icon="@mipmap/search_icon"-->
+        <!--app:actionViewClass="android.support.v7.widget.SearchView"-->
+        <!--app:showAsAction="always"/>-->
+=======
     <item
         android:id="@+id/menu_busca"
         android:title="Busca"
         android:icon="@mipmap/search_icon"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always"/>
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
 
     <item android:id="@+id/menu_profile"
         android:title="Profile"
         android:icon="@mipmap/user_profile"
         app:showAsAction="always"/>
 
+<<<<<<< HEAD
+    <!--<item android:id="@+id/menu_configuracao"-->
+        <!--android:title="Configurações"-->
+        <!--android:icon="@mipmap/settings_48dp"-->
+        <!--app:showAsAction="collapseActionView"/>-->
+=======
     <item android:id="@+id/menu_configuracao"
         android:title="Configurações"
         android:icon="@mipmap/settings_48dp"
         app:showAsAction="collapseActionView"/>
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
 </menu>

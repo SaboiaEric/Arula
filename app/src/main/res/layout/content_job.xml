@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,3 +10,16 @@
     tools:showIn="@layout/activity_job">
 
 </android.support.constraint.ConstraintLayout>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.arula.arula.activities.JobActivity"
+    tools:showIn="@layout/activity_job">
+
+</android.support.constraint.ConstraintLayout>
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0

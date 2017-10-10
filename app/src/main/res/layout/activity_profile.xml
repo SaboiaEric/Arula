@@ -10,6 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+<<<<<<< HEAD
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+=======
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
         <ImageView
             android:id="@+id/header_cover_image"
             android:layout_width="match_parent"

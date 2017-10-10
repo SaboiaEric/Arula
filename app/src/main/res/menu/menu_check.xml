@@ -4,7 +4,11 @@
 
     <item android:id="@+id/menu_check"
         android:title="check"
+<<<<<<< HEAD
+        android:icon="@mipmap/ic_check_white_18dp"
+=======
         android:icon="@mipmap/ic_launcher"
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
         app:showAsAction="always"/>
 
 </menu>

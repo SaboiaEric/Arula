@@ -17,7 +17,11 @@
 
         <ImageView
             android:src="@color/colorPrimaryDark"
+<<<<<<< HEAD
+            android:layout_width="100dp"
+=======
             android:layout_width="110dp"
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
             android:layout_height="60dp"
             android:scaleType="centerCrop"
             android:id="@+id/jobImage"/>
@@ -26,8 +30,13 @@
             android:id="@+id/questionName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
+            android:paddingLeft="110dp"
+            android:paddingTop="18dp"
+=======
             android:paddingLeft="120dp"
             android:paddingTop="10dp"
+>>>>>>> dc13c0ca8fd3745f4996e2b8186ebb2c83bbb0c0
             android:text="Orientação a Objeto"
             android:textSize="18dp"/>
 
