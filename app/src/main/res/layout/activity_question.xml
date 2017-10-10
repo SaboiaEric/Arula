@@ -173,7 +173,6 @@
                     android:text="Próximo"
                     android:layout_alignParentBottom="true"
                     android:textColor="#fff"
-                    android:background="#fff"
                     android:enabled="false"/>
             </LinearLayout>
         </RelativeLayout>
